@@ -1,0 +1,41 @@
+name: 3d
+channels:
+- pytorch
+- conda-forge
+- defaults
+dependencies:
+- pip
+- python=3.7
+- numpy
+- pandas
+- matplotlib
+- nodejs
+- pip:
+  - pathlib
+  - fastcore
+  - sklearn
+  - connected-components-3d
+  - pygorpho
+  - opencv-python
+  - Pillow
+  - SimpleITK
+  - itkwidgets
+  - scikit-image
+  - scipy
+  - pydantic
+  - fire
+  - pytest
+  - pre-commit
+  - jupyterlab==2.3.1
+  - jupytext
+  - jupyterlab-git==0.24.0
+  - scikit-learn
+  - edt
+  - mlflow
+  - onnx
+  - onnxruntime
+  - memo==0.2.2
+  - tqdm==4.61.1
+  - mkdocs-material==7.3.6
+  - mkdocstrings==0.16.2
+  - sphinx-material==0.0.35

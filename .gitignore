@@ -1,0 +1,15 @@
+data
+__pycache__
+*.egg-info/
+.vscode/*
+runs
+.cache/*
+other
+output
+.idea/
+*.pt
+*.SharePointApiKeys.json
+*SharePointApiKeys.json
+SharePointApiKeys.json
+scripts/mlruns/*
+.ipynb_checkpoints

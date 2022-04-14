@@ -1,0 +1,35 @@
+site_name: 3D vasculiciar Analysis
+theme:
+  name: material
+  font:
+    text: Ubuntu
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - codehilite
+  - pymdownx.highlight
+  - footnotes
+
+plugins:
+ - search
+ - mkdocstrings
+
+nav:
+  - index.md
+  - Methodology Overview:
+    - methodology_overview.md
+    - Segmentation Quality.md
+  - installation on HPC and tips.md
+  - Code Overview:
+#    - code_overview.md
+    - prerequisites.md
+    - code usuage.md
+    - config.md
+  - Modules:
+    - Preprocessing: Modules/preprocessing.md
+    - Segmentation: Modules/segmentation.md
+    - Segmentation Postprocessing: Modules/segmentation_postprocessing.md
+    - Distance Transform: Modules/distance_transform.md
+    - Profiles: Modules/profiles.md

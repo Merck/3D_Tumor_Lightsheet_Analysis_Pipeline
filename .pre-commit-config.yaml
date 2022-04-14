@@ -1,0 +1,32 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v1.2.3
+    hooks:
+    -   id: trailing-whitespace
+-   repo: https://github.com/timothycrosley/isort
+    rev: 4.3.21
+    hooks:
+    -   id: isort
+-   repo: https://github.com/psf/black.git
+    rev: 19.10b0
+    hooks:
+    - id: black
+      language_version: python3.7
+      exclude: ^src/external
+-   repo: https://gitlab.com/pycqa/flake8.git
+    rev: 3.8.2
+    hooks:
+    - id: flake8
+      exclude: ^src/external
+-   repo: https://github.com/pycqa/pylint
+    rev: pylint-2.6.0
+    hooks:
+    -   id: pylint
+-   repo: local
+    hooks:
+      - id: pytest-check
+        name: pytest-check
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true

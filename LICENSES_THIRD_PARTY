@@ -1,0 +1,35 @@
+Name                              License                     url
+----------------------------------------------------------------------------------------------------------------------
+pytorch                           BSD                         pytorch.org
+numpy                             BSD                         https://numpy.org/
+pandas                            New BSD License             pandas.pydata.org
+matplotlib                        Matplotlib license          https://matplotlib.org/stable/users/project/license.html
+nodejs                            MIT License                 nodejs.org
+pathlib                           Apache License 2.0          https://github.com/chigopher/pathlib/blob/master/LICENSE       
+fastcore                          Apache License 2.0          https://github.com/fastai/fastcore/blob/master/LICENSE
+sklearn                           BSD License                 https://scikit-learn.org/stable/
+connected-components-3d           GPL-3.0 License             https://github.com/seung-lab/connected-components-3d/blob/master/LICENSE
+pygorpho                          Creative Commons License    https://package.wiki/pygorpho
+opencv-python                     MIT license                 https://pypi.org/project/opencv-python/
+Pillow                            HPND License                https://github.com/python-pillow/Pillow/blob/main/LICENSE
+SimpleITK                         Apache 2.0                  https://github.com/SimpleITK/SimpleITK/blob/master/LICENSE
+itkwidgets                        Apache 2.0                  https://github.com/InsightSoftwareConsortium/itkwidgets/blob/master/LICENSE
+scikit-image                      Custom License              https://scikit-image.org/docs/stable/license.html
+scipy                             BSD 3-Clause License        https://github.com/scipy/scipy/blob/main/LICENSE.txt
+pydantic                          MIT License                 https://github.com/samuelcolvin/pydantic/blob/master/LICENSE
+fire                              Apache 2.0                  https://github.com/google/python-fire/blob/master/LICENSE
+pytest                            MIT License                 https://docs.pytest.org/en/6.2.x/license.html    
+pre-commit                        MIT License                 https://github.com/pre-commit/pre-commit/blob/main/LICENSE                       
+jupyterlab==2.3.1                 Custom License              https://github.com/jupyterlab/jupyterlab/blob/master/LICENSE   
+jupytext                          MIT License                 https://github.com/mwouts/jupytext/blob/main/LICENSE
+jupyterlab-git==0.24.0            Custom License              https://github.com/jupyterlab/jupyterlab/blob/master/LICENSE
+scikit-learn                      BSD License                 https://scikit-learn.org/stable/
+edt                               GNU General Public          https://pypi.org/project/edt/           
+mlflow                            Apache 2.0                  https://github.com/mlflow/mlflow/blob/master/LICENSE.txt
+onnx                              Apache 2.0                  https://github.com/onnx/onnx/blob/main/LICENSE#:~:text=A%20permissive%20license%20whose%20main,terms%20and%20without%20source%20code.
+onnxruntime                       MIT License                 https://github.com/microsoft/onnxruntime/blob/master/LICENSE
+memo==0.2.2                       MIT License                 https://pypi.org/project/python-memo/
+tqdm==4.61.1                      MIT License                 https://pypi.org/project/tqdm/
+mkdocs-material==7.3.6            MIT License                 https://squidfunk.github.io/mkdocs-material/license/
+mkdocstrings==0.16.2              Custom License              https://mkdocstrings.github.io/license/   
+sphinx-material==0.0.35           Custom License              https://github.com/bashtage/sphinx-material/blob/main/LICENSE.md
