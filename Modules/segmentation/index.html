@@ -1,0 +1,1480 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Segmentation - 3D vasculiciar Analysis</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Ubuntu";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#segmentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="3D vasculiciar Analysis" class="md-header__button md-logo" aria-label="3D vasculiciar Analysis" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            3D vasculiciar Analysis
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Segmentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="3D vasculiciar Analysis" class="md-nav__button md-logo" aria-label="3D vasculiciar Analysis" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    3D vasculiciar Analysis
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Methodology Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Methodology Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Methodology Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../methodology_overview/" class="md-nav__link">
+        Methodology overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Segmentation%20Quality/" class="md-nav__link">
+        Segmentation Quality
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation on HPC and tips.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Code Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Code Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Code Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/" class="md-nav__link">
+        Prerequisites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code%20usuage/" class="md-nav__link">
+        Code usuage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/" class="md-nav__link">
+        Config
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preprocessing/" class="md-nav__link">
+        Preprocessing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Segmentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Segmentation
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation" class="md-nav__link">
+    src.segmentation
+  </a>
+  
+    <nav class="md-nav" aria-label="src.segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation--segmentation-module" class="md-nav__link">
+    segmentation module:
+  </a>
+  
+    <nav class="md-nav" aria-label="segmentation module:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation--module-for-blood-vessels-and-tumor-segmentation" class="md-nav__link">
+    module for blood vessels and tumor segmentation
+  </a>
+  
+    <nav class="md-nav" aria-label="module for blood vessels and tumor segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation--this-module-consists-of-four-main-functions" class="md-nav__link">
+    This module consists of four main functions:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation.random_forest" class="md-nav__link">
+    random_forest()
+  </a>
+  
+    <nav class="md-nav" aria-label="random_forest()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.random_forest--parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.random_forest--returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.random_forest--example-usuage" class="md-nav__link">
+    Example Usuage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation.segmentation_wrapper" class="md-nav__link">
+    segmentation_wrapper()
+  </a>
+  
+    <nav class="md-nav" aria-label="segmentation_wrapper()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.segmentation_wrapper--parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.segmentation_wrapper--returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.segmentation_wrapper--example-usuage" class="md-nav__link">
+    Example Usuage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation.thresholding" class="md-nav__link">
+    thresholding()
+  </a>
+  
+    <nav class="md-nav" aria-label="thresholding()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.thresholding--parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.thresholding--returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.thresholding--example-usuage" class="md-nav__link">
+    Example Usuage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation.unet" class="md-nav__link">
+    unet()
+  </a>
+  
+    <nav class="md-nav" aria-label="unet()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.unet--parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.unet--returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.unet--example-usuage" class="md-nav__link">
+    Example Usuage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../segmentation_postprocessing/" class="md-nav__link">
+        Segmentation Postprocessing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distance_transform/" class="md-nav__link">
+        Distance Transform
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profiles/" class="md-nav__link">
+        Profiles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation" class="md-nav__link">
+    src.segmentation
+  </a>
+  
+    <nav class="md-nav" aria-label="src.segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation--segmentation-module" class="md-nav__link">
+    segmentation module:
+  </a>
+  
+    <nav class="md-nav" aria-label="segmentation module:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation--module-for-blood-vessels-and-tumor-segmentation" class="md-nav__link">
+    module for blood vessels and tumor segmentation
+  </a>
+  
+    <nav class="md-nav" aria-label="module for blood vessels and tumor segmentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation--this-module-consists-of-four-main-functions" class="md-nav__link">
+    This module consists of four main functions:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation.random_forest" class="md-nav__link">
+    random_forest()
+  </a>
+  
+    <nav class="md-nav" aria-label="random_forest()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.random_forest--parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.random_forest--returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.random_forest--example-usuage" class="md-nav__link">
+    Example Usuage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation.segmentation_wrapper" class="md-nav__link">
+    segmentation_wrapper()
+  </a>
+  
+    <nav class="md-nav" aria-label="segmentation_wrapper()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.segmentation_wrapper--parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.segmentation_wrapper--returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.segmentation_wrapper--example-usuage" class="md-nav__link">
+    Example Usuage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation.thresholding" class="md-nav__link">
+    thresholding()
+  </a>
+  
+    <nav class="md-nav" aria-label="thresholding()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.thresholding--parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.thresholding--returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.thresholding--example-usuage" class="md-nav__link">
+    Example Usuage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation.unet" class="md-nav__link">
+    unet()
+  </a>
+  
+    <nav class="md-nav" aria-label="unet()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.unet--parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.unet--returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#src.segmentation.unet--example-usuage" class="md-nav__link">
+    Example Usuage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="segmentation">Segmentation</h1>
+<p>Some segmentation models (random_forest and unet) require a pre-trained model as a function argument. All pre-trained model can be found within the <em>3DHistology</em> folder on the HPC server at this link:</p>
+<div class="highlight"><pre><span></span><code>/SFS/project/ry/3DHistology/pretrained_models.
+</code></pre></div>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="src.segmentation"></a>
+    <div class="doc doc-contents first">
+
+      <h3 id="src.segmentation--segmentation-module">segmentation module:</h3>
+<h4 id="src.segmentation--module-for-blood-vessels-and-tumor-segmentation">module for blood vessels and tumor segmentation</h4>
+<h5 id="src.segmentation--this-module-consists-of-four-main-functions">This module consists of four main functions:</h5>
+<ul>
+<li>random_forest</li>
+<li>segmentation_wrapper</li>
+<li>thresholding</li>
+<li>unet</li>
+</ul>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.segmentation.random_forest" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">random_forest</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">,</span> <span class="n">model_file</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Function that performs the segmentation of the blood vessels using Random Forest model (if you want to segment e.g. tumors this function can still be used. However,
+you need to provide a pre-trained model (model_file) that is pretrained for tumors)</p>
+<p>Function performs the segmentation and saves the results (individual segmented images) to the output_directory path provided.</p>
+<h4 id="src.segmentation.random_forest--parameters">Parameters</h4>
+<p><strong>data_path</strong>: <em>(pathlib.PosixPath object)</em>
+relative path to the images which should be segmented (notice that we work with preprocessed images which are in npy for and not in .tiff format)</p>
+<p><strong>output_directory</strong> <em>(pathlib.PosixPath object)</em>
+relative path to a folder where the results should be saved</p>
+<p><strong>model_file</strong>: <em>(pathlib.PosixPath object)</em>
+relative path to the pre-trained model binary file, which should be used for the segmentation</p>
+<h4 id="src.segmentation.random_forest--returns">Returns</h4>
+<p>None: Results are dumbed on the disk.</p>
+<h4 id="src.segmentation.random_forest--example-usuage">Example Usuage</h4>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">random_forest</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">random_forest</span><span class="p">(</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;</span><span class="p">),</span>
+    <span class="n">output_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/RF/raw/vessel&#39;</span><span class="p">),</span>
+    <span class="n">model_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;pretrained_models/rf_model.joblib&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+
+        <details class="quote">
+          <summary>Source code in <code>src/segmentation.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@log_step</span>
+<span class="k">def</span> <span class="nf">random_forest</span><span class="p">(</span>
+    <span class="n">data_path</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">,</span>
+    <span class="n">output_directory</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">,</span>
+    <span class="n">model_file</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function that performs the segmentation of the blood vessels using Random Forest model (if you want to segment e.g. tumors this function can still be used. However,</span>
+<span class="sd">    you need to provide a pre-trained model (model_file) that is pretrained for tumors)</span>
+
+<span class="sd">    Function performs the segmentation and saves the results (individual segmented images) to the output_directory path provided.</span>
+
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    **data_path**: *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to the images which should be segmented (notice that we work with preprocessed images which are in npy for and not in .tiff format)</span>
+
+<span class="sd">    **output_directory** *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to a folder where the results should be saved</span>
+
+<span class="sd">    **model_file**: *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to the pre-trained model binary file, which should be used for the segmentation</span>
+
+
+<span class="sd">    Returns</span>
+<span class="sd">    ------</span>
+
+<span class="sd">    None: Results are dumbed on the disk.</span>
+
+
+<span class="sd">    Example Usuage</span>
+<span class="sd">    --------------</span>
+<span class="sd">    ```python</span>
+
+<span class="sd">    &gt;&gt;&gt;from src.segmentation import random_forest</span>
+<span class="sd">    &gt;&gt;&gt;random_forest(</span>
+<span class="sd">        data_path = Path(&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;),</span>
+<span class="sd">        output_directory = Path(&#39;ppdm/data/5IT_DUMMY_STUDY/RF/raw/vessel&#39;),</span>
+<span class="sd">        model_file = Path(&#39;pretrained_models/rf_model.joblib&#39;)</span>
+<span class="sd">    )</span>
+<span class="sd">    ```</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">loaded_rf</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">model_file</span><span class="p">)</span>
+
+    <span class="n">segment_rf_partial</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span>
+        <span class="n">_segment_random_forest</span><span class="p">,</span>
+        <span class="n">loaded_estimator_to_use</span><span class="o">=</span><span class="n">loaded_rf</span><span class="p">,</span>
+        <span class="n">output_directory</span><span class="o">=</span><span class="n">output_directory</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">directory_ok</span> <span class="o">=</span> <span class="n">check_content_of_two_directories</span><span class="p">(</span>
+        <span class="n">data_path</span><span class="p">,</span> <span class="n">output_directory</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">directory_ok</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">output_directory</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">remove_content</span><span class="p">(</span><span class="n">output_directory</span><span class="p">)</span>
+
+        <span class="n">parallel</span><span class="p">(</span>
+            <span class="n">segment_rf_partial</span><span class="p">,</span>
+            <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data_path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.npy&quot;</span><span class="p">))),</span>
+            <span class="n">n_workers</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+            <span class="n">progress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">threadpool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.segmentation.segmentation_wrapper" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">segmentation_wrapper</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">method_parameters</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>This function is a main wrapper for segmentation used within the automated pipeline.</p>
+<p>It uses functions written in this script and wraps them in this wrapper (one big function).
+If one want to use segmentations methods in a script, you may use individual segmentation functions -&gt; unet, thresholding, random_forest</p>
+<h4 id="src.segmentation.segmentation_wrapper--parameters">Parameters</h4>
+<p><strong>data_path</strong> : <em>(pathlib.PosixPath object)</em>
+relative path to the study which should be segmented (notice that we work with preprocessed images which are in npy for and not in .tiff format)</p>
+<p><strong>method</strong> : <em>(str)</em>
+method to use for segmentation (unet, thresholding, random_forest)</p>
+<p><strong>method_parameters</strong>: <em>(Dict)</em>
+relative path to the pre-trained model binary file, which should be used for the segmentation</p>
+<p><strong>device</strong>: <em>(str)</em>
+graphic card which should be used. Code automatically selects graphic card, that is free.</p>
+<h4 id="src.segmentation.segmentation_wrapper--returns">Returns</h4>
+<p>None: Results are dumbed on the disk.</p>
+<h4 id="src.segmentation.segmentation_wrapper--example-usuage">Example Usuage</h4>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">unet</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">unet</span><span class="p">(</span>
+    <span class="n">input_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;</span><span class="p">),</span>
+    <span class="n">output_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/DOCUMENTATION/raw/vessel&#39;</span><span class="p">),</span>
+    <span class="n">model_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;pretrained_models/unet_train_full_5IT_7IV_8IV.pt&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+        <details class="quote">
+          <summary>Source code in <code>src/segmentation.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@log_step</span>
+<span class="k">def</span> <span class="nf">segmentation_wrapper</span><span class="p">(</span>
+    <span class="n">data_path</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">method_parameters</span><span class="p">:</span> <span class="n">Dict</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    This function is a main wrapper for segmentation used within the automated pipeline.</span>
+
+<span class="sd">    It uses functions written in this script and wraps them in this wrapper (one big function).</span>
+<span class="sd">    If one want to use segmentations methods in a script, you may use individual segmentation functions -&gt; unet, thresholding, random_forest</span>
+
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    **data_path** : *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to the study which should be segmented (notice that we work with preprocessed images which are in npy for and not in .tiff format)</span>
+
+<span class="sd">    **method** : *(str)*</span>
+<span class="sd">    method to use for segmentation (unet, thresholding, random_forest)</span>
+
+<span class="sd">    **method_parameters**: *(Dict)*</span>
+<span class="sd">    relative path to the pre-trained model binary file, which should be used for the segmentation</span>
+
+<span class="sd">    **device**: *(str)*</span>
+<span class="sd">    graphic card which should be used. Code automatically selects graphic card, that is free.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    ------</span>
+
+<span class="sd">    None: Results are dumbed on the disk.</span>
+
+
+<span class="sd">    Example Usuage</span>
+<span class="sd">    --------------</span>
+
+<span class="sd">    ```python</span>
+
+<span class="sd">    &gt;&gt;&gt;from src.segmentation import unet</span>
+<span class="sd">    &gt;&gt;&gt;unet(</span>
+<span class="sd">        input_directory = Path(&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;),</span>
+<span class="sd">        output_directory = Path(&#39;ppdm/data/5IT_DUMMY_STUDY/DOCUMENTATION/raw/vessel&#39;),</span>
+<span class="sd">        model_file = Path(&#39;pretrained_models/unet_train_full_5IT_7IV_8IV.pt&#39;)</span>
+<span class="sd">        )</span>
+<span class="sd">    ```</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">module_results_path</span> <span class="o">=</span> <span class="s2">&quot;results/segmentation&quot;</span>
+    <span class="n">module_name</span> <span class="o">=</span> <span class="s2">&quot;segment&quot;</span>
+    <span class="n">segmentation_function</span> <span class="o">=</span> <span class="n">_select_method</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+    <span class="n">parameters_as_string</span> <span class="o">=</span> <span class="n">join_keys_and_values_to_list</span><span class="p">(</span><span class="n">method_parameters</span><span class="p">)</span>
+    <span class="n">output_folder_name</span> <span class="o">=</span> <span class="n">join_to_string</span><span class="p">(</span>
+        <span class="p">[</span><span class="n">module_name</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">parameters_as_string</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">output_directory</span> <span class="o">=</span> <span class="n">create_relative_path</span><span class="p">(</span>
+        <span class="n">data_path</span><span class="p">,</span> <span class="n">module_results_path</span><span class="p">,</span> <span class="n">output_folder_name</span>
+    <span class="p">)</span>
+
+    <span class="n">directory_ok</span> <span class="o">=</span> <span class="n">check_content_of_two_directories</span><span class="p">(</span>
+        <span class="n">data_path</span><span class="p">,</span> <span class="n">output_directory</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">directory_ok</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">output_directory</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">remove_content</span><span class="p">(</span><span class="n">output_directory</span><span class="p">)</span>
+        <span class="n">segmentation_function</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">,</span> <span class="o">**</span><span class="n">method_parameters</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">output_directory</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.segmentation.thresholding" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">thresholding</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">mask_path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Function that performs the segmentation using thresholding. This function can be used for any channel
+(e.g. vessels, tumors) as it calculates "optimal" threshold value automatically.</p>
+<p>Function performs the segmentation and saves the results (individual segmented images) to the output_directory path provided.</p>
+<h4 id="src.segmentation.thresholding--parameters">Parameters</h4>
+<p><strong>data_path</strong>: <em>(pathlib.PosixPath object)</em>
+relative path to the images which should be segmented (notice that we work with preprocessed images which are in npy for and not in .tiff format)</p>
+<p><strong>output_directory</strong> <em>(pathlib.PosixPath object)</em>
+relative path to a folder where the results should be saved</p>
+<p><strong>method</strong>: <em>(str)</em> segmentation method to be used.
+Supported methods are "th_otsu", "th_triangle", "th_yen".</p>
+<p>ANOTHER OPTIONAL PARAMETERS:</p>
+<p><strong>mask_path</strong>: <em>(pathlib.PosixPath object)</em>
+relative path for the binary mask to be used to filter the area of interest on which the segmentation will be performed.</p>
+<h4 id="src.segmentation.thresholding--returns">Returns</h4>
+<p>None: Results are dumbed on the disk.</p>
+<h4 id="src.segmentation.thresholding--example-usuage">Example Usuage</h4>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">thresholding</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">thresholding</span><span class="p">(</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;</span><span class="p">),</span>
+    <span class="n">output_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;msd_projects/ppdm/data/5IT_DUMMY_STUDY/THRES/raw/vessel&#39;</span><span class="p">),</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;th_otsu&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+        <details class="quote">
+          <summary>Source code in <code>src/segmentation.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@log_step</span>
+<span class="k">def</span> <span class="nf">thresholding</span><span class="p">(</span>
+    <span class="n">data_path</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">,</span>
+    <span class="n">output_directory</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">,</span>
+    <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">mask_path</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function that performs the segmentation using thresholding. This function can be used for any channel</span>
+<span class="sd">    (e.g. vessels, tumors) as it calculates &quot;optimal&quot; threshold value automatically.</span>
+
+<span class="sd">    Function performs the segmentation and saves the results (individual segmented images) to the output_directory path provided.</span>
+
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    **data_path**: *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to the images which should be segmented (notice that we work with preprocessed images which are in npy for and not in .tiff format)</span>
+
+<span class="sd">    **output_directory** *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to a folder where the results should be saved</span>
+
+<span class="sd">    **method**: *(str)* segmentation method to be used.</span>
+<span class="sd">    Supported methods are &quot;th_otsu&quot;, &quot;th_triangle&quot;, &quot;th_yen&quot;.</span>
+
+
+<span class="sd">    ANOTHER OPTIONAL PARAMETERS:</span>
+
+<span class="sd">    **mask_path**: *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path for the binary mask to be used to filter the area of interest on which the segmentation will be performed.</span>
+
+
+
+<span class="sd">    Returns</span>
+<span class="sd">    ------</span>
+
+<span class="sd">    None: Results are dumbed on the disk.</span>
+
+
+<span class="sd">    Example Usuage</span>
+<span class="sd">    --------------</span>
+<span class="sd">    ```python</span>
+
+<span class="sd">    &gt;&gt;&gt;from src.segmentation import thresholding</span>
+<span class="sd">    &gt;&gt;&gt;thresholding(</span>
+<span class="sd">        data_path = Path(&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;),</span>
+<span class="sd">        output_directory = Path(&#39;msd_projects/ppdm/data/5IT_DUMMY_STUDY/THRES/raw/vessel&#39;),</span>
+<span class="sd">        method = &quot;th_otsu&quot;</span>
+<span class="sd">    )</span>
+
+<span class="sd">    ```</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">supported_methods</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;th_otsu&quot;</span><span class="p">,</span> <span class="s2">&quot;th_triangle&quot;</span><span class="p">,</span> <span class="s2">&quot;th_yen&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">method</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">supported_methods</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;thresholding method must be either in : </span><span class="si">{</span><span class="n">supported_methods</span><span class="si">}</span><span class="s2">, you have provided: </span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+    <span class="n">threshold_value</span> <span class="o">=</span> <span class="n">_calculate_threshold_value</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">mask_path</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;threshold </span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2"> value: </span><span class="si">{</span><span class="n">threshold_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">_segment_and_save_masks_threshold</span><span class="p">(</span>
+        <span class="n">data_path</span><span class="p">,</span> <span class="n">threshold_value</span><span class="p">,</span> <span class="n">output_directory</span>
+    <span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.segmentation.unet" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">unet</span><span class="p">(</span><span class="n">input_directory</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">,</span> <span class="n">model_file</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Function that performs the segmentation of the blood vessels (if you want to segment e.g. tumors this function can still be used. However,
+you need to provide a pre-trained model (model_file) that is pretrained for tumors)</p>
+<p>Function performs the segmentation and saves the results (individual segmented images) to the output_directory path provided.</p>
+<h4 id="src.segmentation.unet--parameters">Parameters</h4>
+<p><strong>input_directory</strong> : <em>(pathlib.PosixPath object)</em>
+relative path to the images which should be segmented (notice that we work with preprocessed images which are in npy for and not in .tiff format)</p>
+<p><strong>output_directory</strong> : <em>(pathlib.PosixPath object)</em>
+relative path to a folder where the results should be saved</p>
+<p><strong>model_file</strong>: <em>(pathlib.PosixPath object)</em>
+relative path to the pre-trained model binary file, which should be used for the segmentation</p>
+<p><strong>device</strong>: <em>(str)</em>
+graphic card which should be used. Code automatically selects graphic card, that is free.</p>
+<h4 id="src.segmentation.unet--returns">Returns</h4>
+<p>None: Results are dumbed on the disk.</p>
+<h4 id="src.segmentation.unet--example-usuage">Example Usuage</h4>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">unet</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">unet</span><span class="p">(</span>
+    <span class="n">input_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;msd_projects/ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;</span><span class="p">),</span>
+    <span class="n">output_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;msd_projects/ppdm/data/5IT_DUMMY_STUDY/DOCUMENTATION/raw/vessel&#39;</span><span class="p">),</span>
+    <span class="n">model_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;pretrained_models/unet_train_full_5IT_7IV_8IV.pt&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+</code></pre></div>
+
+        <details class="quote">
+          <summary>Source code in <code>src/segmentation.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@log_step</span>
+<span class="k">def</span> <span class="nf">unet</span><span class="p">(</span>
+    <span class="n">input_directory</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">,</span>
+    <span class="n">output_directory</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">,</span>
+    <span class="n">model_file</span><span class="p">:</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PosixPath</span><span class="p">,</span>
+    <span class="n">device</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function that performs the segmentation of the blood vessels (if you want to segment e.g. tumors this function can still be used. However,</span>
+<span class="sd">    you need to provide a pre-trained model (model_file) that is pretrained for tumors)</span>
+
+<span class="sd">    Function performs the segmentation and saves the results (individual segmented images) to the output_directory path provided.</span>
+
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    **input_directory** : *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to the images which should be segmented (notice that we work with preprocessed images which are in npy for and not in .tiff format)</span>
+
+<span class="sd">    **output_directory** : *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to a folder where the results should be saved</span>
+
+<span class="sd">    **model_file**: *(pathlib.PosixPath object)*</span>
+<span class="sd">    relative path to the pre-trained model binary file, which should be used for the segmentation</span>
+
+<span class="sd">    **device**: *(str)*</span>
+<span class="sd">    graphic card which should be used. Code automatically selects graphic card, that is free.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    ------</span>
+
+<span class="sd">    None: Results are dumbed on the disk.</span>
+
+
+<span class="sd">    Example Usuage</span>
+<span class="sd">    --------------</span>
+
+<span class="sd">    ```python</span>
+
+<span class="sd">    &gt;&gt;&gt;from src.segmentation import unet</span>
+<span class="sd">    &gt;&gt;&gt;unet(</span>
+<span class="sd">        input_directory = Path(&#39;msd_projects/ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;),</span>
+<span class="sd">        output_directory = Path(&#39;msd_projects/ppdm/data/5IT_DUMMY_STUDY/DOCUMENTATION/raw/vessel&#39;),</span>
+<span class="sd">        model_file = Path(&#39;pretrained_models/unet_train_full_5IT_7IV_8IV.pt&#39;)</span>
+<span class="sd">        )</span>
+<span class="sd">    ```</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">input_directory_paths</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">input_directory</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*.npy&quot;</span><span class="p">)))</span>
+
+    <span class="n">directory_ok</span> <span class="o">=</span> <span class="n">check_content_of_two_directories</span><span class="p">(</span>
+        <span class="n">input_directory</span><span class="p">,</span> <span class="n">output_directory</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">directory_ok</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">output_directory</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="n">remove_content</span><span class="p">(</span><span class="n">output_directory</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">device</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">device</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;cuda:</span><span class="si">{</span><span class="n">select_avail_gpu</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">model_file</span><span class="p">)</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">input_directory_paths</span><span class="p">):</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+            <span class="c1"># convert 16 bit images to 8bits</span>
+            <span class="k">if</span> <span class="n">image</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s2">&quot;uint16&quot;</span><span class="p">:</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">image</span> <span class="o">/</span> <span class="mi">65535</span> <span class="o">*</span> <span class="mi">255</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="c1"># split images to tiles</span>
+            <span class="n">tiler</span> <span class="o">=</span> <span class="n">VolumeSlicer</span><span class="p">(</span>
+                <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span>
+                <span class="n">voxel_size</span><span class="o">=</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">),</span>
+                <span class="n">voxel_step</span><span class="o">=</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">),</span>
+            <span class="p">)</span>
+            <span class="n">tiles</span> <span class="o">=</span> <span class="n">tiler</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+            <span class="n">tiles_processed</span> <span class="o">=</span> <span class="n">_unet_runner</span><span class="p">(</span><span class="n">tiles</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">device</span><span class="p">)</span>
+            <span class="c1"># merge tiles back to one image</span>
+            <span class="n">tiles_stiched</span> <span class="o">=</span> <span class="n">tiler</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">tiles_processed</span><span class="p">)</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">tiles_stiched</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+            <span class="c1"># save mask</span>
+            <span class="n">save_path_mask</span> <span class="o">=</span> <span class="n">output_directory</span> <span class="o">/</span> <span class="n">file</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">output_directory</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">save_path_mask</span><span class="p">,</span> <span class="n">mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">))</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../preprocessing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Preprocessing" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Preprocessing
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../segmentation_postprocessing/" class="md-footer__link md-footer__link--next" aria-label="Next: Segmentation Postprocessing" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Segmentation Postprocessing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
