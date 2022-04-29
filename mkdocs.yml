@@ -20,7 +20,6 @@ nav:
   - index.md
   - Methodology Overview:
     - methodology_overview.md
-    - Segmentation Quality.md
   - Code Overview:
 #    - code_overview.md
     - prerequisites.md
