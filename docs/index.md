@@ -10,6 +10,7 @@ This repo provides code for **3D Histology applications for drug discovery** pap
 * Develop an analysis pipeline with two run modes:
 
     a) Automatic run mode: enables executing full analysis pipeline on a new data set via a single line of code
+    
     b) Lego Brick mode: enables re-using parts of the analysis pipeline for building new analysis methods. 
 
 

@@ -11,7 +11,10 @@ Our lightsheet image analysis pipeline consisted of four main steps – Blood ve
 ### Diagram of Our Pipeline
 <!-- ![image](/images/pipeline.png =100x20) -->
 <!-- <img src="/images/pipeline.png" width="2000"> -->
-<img src="/images/pipeline.png">
+
+<img src="images/pipeline.png">
+
+
 
 ### Analysis Pipeline Steps:
 
