@@ -20,11 +20,11 @@ Niyanta Kumar, Petr Hrobař, Martin Vagenknecht, Jindrich Soukup, Peter Blooming
 
 ## Development Team
 
-In case of need of any editional (technical) information reach out to the development team:
+In case of need of any editional (technical) information reach out to the development team via **github's issue**:
 
-* Martin Vagenknech (MSD) (martin.vagenknech@merck.com)
-* Petr Hrobar (MSD) (petr.hrobar@merck.com)
-* Jindrich Soukup (MSD) (jindrich.soukup@merck.com)
+* Martin Vagenknech (Merck & Co., Inc.)
+* Petr Hrobar (Merck & Co., Inc.)
+* Jindrich Soukup (Merck & Co., Inc.)
 
 
 ***
