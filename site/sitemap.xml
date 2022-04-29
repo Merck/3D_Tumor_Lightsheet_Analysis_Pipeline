@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/Segmentation%20Quality/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/code%20usuage/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/code_overview/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/config/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/methodology_overview/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/prerequisites/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/Modules/distance_transform/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/Modules/preprocessing/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/Modules/profiles/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/Modules/segmentation/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/Modules/segmentation_postprocessing/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>None</loc>
+         <loc>https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/Overview/intro/</loc>
          <lastmod>2022-04-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
