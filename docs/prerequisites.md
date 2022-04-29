@@ -2,27 +2,26 @@
 
 The code expects to have :
 
-* Python installed on HPC (e.g. via minoconda)
+* Python
 * Python virtual environment containing all required packages and modules (3d environment)
-
-In order to install infrastructure on the hpc server (python, packages, etc.) follow [this guide](installation on HPC and tips.md).
-
 
 
 #### Folder Structure
 
 Due to the size of the data, every single step dumps the results on the disk (as a substitute for the RAM). Therefore, the code operates with a fixed folder structure
 
-* When analyzing one particular study (*5_IT_STUDY* in this case), the following **folders structure** of three channels (vessels, tumors, virus) including the **config.json** file is expected.
+* When analyzing one particular study, the following **folders structure** of three channels (vessels, tumors, virus) including the **config.json** file is expected.
+
+* Folder Names and Structure: source -> raw -> (tumor, vessel, virus) have fixed names
 
 * Expected Folder Structure
 
-    The **root directory** is considered the **ppdm** folder (see tree diagram below)
+    The **root directory** is considered the **3D_Tumor_Lightsheet_Analysis_Pipeline** folder (see tree diagram below)
 
     ```bash
-    ppdm
+    3D_Tumor_Lightsheet_Analysis_Pipeline
     └─ data
-       └─ 5IT_STUDY
+       └─ your_study_name
             └─ config.json
             └─ source
                 └─raw

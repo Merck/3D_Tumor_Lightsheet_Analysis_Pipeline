@@ -15,14 +15,12 @@ markdown_extensions:
 plugins:
  - search
  - mkdocstrings
- - with-pdf
 
 nav:
   - index.md
   - Methodology Overview:
     - methodology_overview.md
     - Segmentation Quality.md
-  - installation on HPC and tips.md
   - Code Overview:
 #    - code_overview.md
     - prerequisites.md
