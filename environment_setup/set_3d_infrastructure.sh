@@ -1,9 +1,8 @@
-#source .bashrc
-
 # clone project
-#git clone githublink
-# go to repo
-cd ppdm
+
+# go to repo root (3D_Tumor_Lightsheet_Analysis_Pipeline)
+
+
 # create python environment
 conda env create --file=environment.yml -y
 # activate the environment

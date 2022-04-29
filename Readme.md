@@ -13,11 +13,14 @@ This repo provides code for **3D Histology applications for drug discovery** pap
 
     b) Lego Brick mode: enables re-using parts of the analysis pipeline for building new analysis methods. 
 
-**Code Documentation may be find [here](https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/)**
+# 
+## Code Documentation 
+**The code documentation and examples may be found [here](https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/)**
 
 
-***
-Learn more in our publication:
+#
+
+## Learn more in our publication:
 
 
 
