@@ -1,11 +1,25 @@
-## Description  
+## Description
 
 This repo provides code for **3D Histology applications for drug discovery** paper.
 
-Learn more in our publication:
+**A custom data analysis pipeline was developed to enable rapid analysis of tumor lightsheet datasets. Key goals of this analysis pipeline are:**
+
+* Enable extraction of quantitative readouts regarding drug penetration in whole tumors from lightsheet data sets. See Dobosz et al. 2014., Neoplasia[^1] for reference. 
+* Use python programming to make use of open source packages that can support building a custom pipeline.
+* Use cloud computing environment (Merck High Performance Computing Resources) to enable rapid analysis of very large lightsheet data sets. 
+* Develop an analysis pipeline with two run modes:
+
+    a) Automatic run mode: enables executing full analysis pipeline on a new data set via a single line of code
+    b) Lego Brick mode: enables re-using parts of the analysis pipeline for building new analysis methods. 
 
 
 ***
+Learn more in our publication:
+
+
+
+
+
 ***Title: <br />
 High-Resolution ex vivo tissue clearing, lightsheet imaging, and data analysis to support macromolecular drug and biomarker distribution in whole organs and tumors. <br /> <br /> Short Tile:<br />
 3D Histology applications for drug discovery.***
@@ -58,5 +72,11 @@ When installing the package:
     2) Create a python environment run all lines of `environment_setup/set_3d_infrastructure.sh` manually in the terminal
 
 
-
+#### Copyright
 Copyright © 2022 Merck & Co., Inc., Kenilworth, NJ, USA and its affiliates. All rights reserved.
+
+
+#### Refs
+[^1]: Dobosz, M., Ntziachristos, V., Scheuer, W. & Strobel, S. **Multispectral Fluorescence Ultramicroscopy: Three-Dimensional Visualization and Automatic Quantification of Tumor Morphology, Drug Penetration, and Antiangiogenic Treatment Response**. Neoplasia 16, 1-U24, doi:10.1593/neo.131848 (2014).*
+
+
