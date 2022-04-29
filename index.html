@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#this-document-provides-an-overview-of-operating-the-code-pipeline-and-functions-documentation" class="md-skip">
+        <a href="#description" class="md-skip">
           Skip to content
         </a>
       
@@ -213,9 +213,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-document-provides-an-overview-of-operating-the-code-pipeline-and-functions-documentation" class="md-nav__link">
-    This document provides an overview of operating the code pipeline and functions documentation.
+  <a href="#description" class="md-nav__link">
+    Description
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-team" class="md-nav__link">
+    Development Team
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copyright" class="md-nav__link">
+    Copyright
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs" class="md-nav__link">
+    Refs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -296,37 +330,22 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="installation on HPC and tips.md" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_3">
           Code Overview
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Code Overview" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Code Overview
         </label>
@@ -391,18 +410,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_4">
           Modules
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Modules" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Modules
         </label>
@@ -510,9 +529,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-document-provides-an-overview-of-operating-the-code-pipeline-and-functions-documentation" class="md-nav__link">
-    This document provides an overview of operating the code pipeline and functions documentation.
+  <a href="#description" class="md-nav__link">
+    Description
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-team" class="md-nav__link">
+    Development Team
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copyright" class="md-nav__link">
+    Copyright
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refs" class="md-nav__link">
+    Refs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -531,14 +584,70 @@
                 
                   <h1>Home</h1>
                 
-                <h4 id="this-document-provides-an-overview-of-operating-the-code-pipeline-and-functions-documentation">This document provides an overview of operating the code pipeline and functions documentation.</h4>
-<p>This repo provides code for 3d analysis.</p>
-<p>In case of need of any editional (technical) information reach out to the development team:</p>
+                <h2 id="description">Description</h2>
+<p>This repo provides code for <strong>3D Histology applications for drug discovery</strong> paper.</p>
+<p><strong>A custom data analysis pipeline was developed to enable rapid analysis of tumor lightsheet datasets. Key goals of this analysis pipeline are:</strong></p>
 <ul>
-<li>Martin Vagenknecht (martin.vagenknecht@merck.com)</li>
-<li>Petr Hrobar (petr.hrobar@merck.com)</li>
-<li>Jindrich Soukup (jindrich.soukup@merck.com)</li>
+<li>Enable extraction of quantitative readouts regarding drug penetration in whole tumors from lightsheet data sets. See Dobosz et al. 2014., Neoplasia<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for reference. </li>
+<li>Use python programming to make use of open source packages that can support building a custom pipeline.</li>
+<li>Use cloud computing environment (Merck High Performance Computing Resources) to enable rapid analysis of very large lightsheet data sets. </li>
+<li>
+<p>Develop an analysis pipeline with two run modes:</p>
+<p>a) Automatic run mode: enables executing full analysis pipeline on a new data set via a single line of code
+b) Lego Brick mode: enables re-using parts of the analysis pipeline for building new analysis methods. </p>
+</li>
 </ul>
+<hr />
+<p>Learn more in our publication:</p>
+<p><strong><em>Title: <br />
+High-Resolution ex vivo tissue clearing, lightsheet imaging, and data analysis to support macromolecular drug and biomarker distribution in whole organs and tumors. <br /> <br /> Short Tile:<br />
+3D Histology applications for drug discovery.</em></strong></p>
+<p><strong>Authors:<br /></strong></p>
+<p>Niyanta Kumar, Petr Hrobař, Martin Vagenknecht, Jindrich Soukup, Peter Bloomingdale, Tomoko Freshwater, Sophia Bardehle, Roman Peter, Nadia Patterson, Ruban Mangadu, Cinthia Pastuskovas, and Mark Cancilla
+<br /><br /><strong><em>Merck &amp; Co., Inc.</em></strong></p>
+<hr />
+<h2 id="development-team">Development Team</h2>
+<p>In case of need of any editional (technical) information reach out to the development team via <strong>github's issue</strong>:</p>
+<ul>
+<li>Martin Vagenknech (Merck &amp; Co., Inc.)</li>
+<li>Petr Hrobar (Merck &amp; Co., Inc.)</li>
+<li>Jindrich Soukup (Merck &amp; Co., Inc.)</li>
+</ul>
+<hr />
+<h2 id="installation">Installation</h2>
+<p>Repo is a python package. Installation process can be automated via bash <code>.sh</code> file in the <code>environment_setup</code> folder.</p>
+<p>When installing the package:</p>
+<ul>
+<li>
+<p>MAC/LINUX Users</p>
+<p>1) Make sure you have a python installed on your computer.
+if not you may use <code>set_python.sh</code> file
+Run in the terminal:
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> environment_setup/set_python.sh
+</code></pre></div></p>
+<p>2) Create a python environment<br />
+Run in the terminal:
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> environment_setup/set_3d_infrastructure.sh
+</code></pre></div></p>
+</li>
+<li>
+<p>Windows Users
+    1) Make sure you have a python installed on your computer.
+    if not, you may use <a href="https://docs.conda.io/en/latest/miniconda.html">this link.</a></p>
+<p>2) Create a python environment run all lines of <code>environment_setup/set_3d_infrastructure.sh</code> manually in the terminal</p>
+</li>
+</ul>
+<h4 id="copyright">Copyright</h4>
+<p>Copyright © 2022 Merck &amp; Co., Inc., Kenilworth, NJ, USA and its affiliates. All rights reserved.</p>
+<h4 id="refs">Refs</h4>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Dobosz, M., Ntziachristos, V., Scheuer, W. &amp; Strobel, S. <strong>Multispectral Fluorescence Ultramicroscopy: Three-Dimensional Visualization and Automatic Quantification of Tumor Morphology, Drug Penetration, and Antiangiogenic Treatment Response</strong>. Neoplasia 16, 1-U24, doi:10.1593/neo.131848 (2014).*&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               

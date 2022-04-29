@@ -257,21 +257,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../installation on HPC and tips.md" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -279,18 +264,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_3">
           Code Overview
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Code Overview" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Code Overview
         </label>
@@ -400,18 +385,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_4">
           Modules
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Modules" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Modules
         </label>
@@ -550,22 +535,24 @@
                 <h4 id="prerequisites">PREREQUISITES</h4>
 <p>The code expects to have :</p>
 <ul>
-<li>Python installed on HPC (e.g. via minoconda)</li>
+<li>Python</li>
 <li>Python virtual environment containing all required packages and modules (3d environment)</li>
 </ul>
-<p>In order to install infrastructure on the hpc server (python, packages, etc.) follow <a href="installation on HPC and tips.md">this guide</a>.</p>
 <h4 id="folder-structure">Folder Structure</h4>
 <p>Due to the size of the data, every single step dumps the results on the disk (as a substitute for the RAM). Therefore, the code operates with a fixed folder structure</p>
 <ul>
 <li>
-<p>When analyzing one particular study (<em>5_IT_STUDY</em> in this case), the following <strong>folders structure</strong> of three channels (vessels, tumors, virus) including the <strong>config.json</strong> file is expected.</p>
+<p>When analyzing one particular study, the following <strong>folders structure</strong> of three channels (vessels, tumors, virus) including the <strong>config.json</strong> file is expected.</p>
+</li>
+<li>
+<p>Folder Names and Structure: source -&gt; raw -&gt; (tumor, vessel, virus) have fixed names</p>
 </li>
 <li>
 <p>Expected Folder Structure</p>
-<p>The <strong>root directory</strong> is considered the <strong>ppdm</strong> folder (see tree diagram below)</p>
-<div class="highlight"><pre><span></span><code>ppdm
+<p>The <strong>root directory</strong> is considered the <strong>3D_Tumor_Lightsheet_Analysis_Pipeline</strong> folder (see tree diagram below)</p>
+<div class="highlight"><pre><span></span><code>3D_Tumor_Lightsheet_Analysis_Pipeline
 └─ data
-   └─ 5IT_STUDY
+   └─ your_study_name
         └─ config.json
         └─ <span class="nb">source</span>
             └─raw
