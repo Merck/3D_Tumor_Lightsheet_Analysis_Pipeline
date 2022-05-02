@@ -12,7 +12,7 @@ Our lightsheet image analysis pipeline consisted of four main steps – Blood ve
 <!-- ![image](/images/pipeline.png =100x20) -->
 <!-- <img src="/images/pipeline.png" width="2000"> -->
 
-![](../images/pipeline.png)
+<!-- ![](../images/pipeline.png) -->
 <img src="../images/pipeline.png">
 
 
