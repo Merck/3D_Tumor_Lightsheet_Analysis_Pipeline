@@ -43,10 +43,10 @@ def main(config_path: pathlib.PosixPath) -> None:
     **config_path** : *(pathlib.PosixPath)* Relative path to the config file defining the entire process (Notice the expected folder structure).
 
     ```bash
-    ppdm
+    3D_Tumor_Lightsheet_Analysis_Pipeline
     └─ data
-       └─ 5IT_STUDY
-            └─ **config.json**
+       └─ your_study_name
+            └─ config.json
             └─ source
                 └─raw
                    └─tumor

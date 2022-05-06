@@ -20,13 +20,13 @@ plugins:
 
 nav:
   - index.md
-  - Methodology Overview:
-    - methodology_overview.md
-  - Code Overview:
-#    - code_overview.md
-    - prerequisites.md
+  - methodology_overview.md
+  - Code Documentation:
+    - code overview.md
+    - Code use pre-requisites and Installation instructions.md
     - code usuage.md
     - config.md
+    - install.md
   - Modules:
     - Preprocessing: Modules/preprocessing.md
     - Segmentation: Modules/segmentation.md

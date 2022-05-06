@@ -1,9 +1,9 @@
 
-## Tumor Lightsheet data analysis pipeline: 
+# Methodology Overview:  
+
+A detailed description of the tumor lightsheet image analysis pipeline is provided in the methods section of the manuscript by Kumar et al. 2022. Briefly, this tumor lightsheet image analysis method comprised of four main steps that accomplish: 
 
 **Goal: Analysis of of biologic penetration in intact/whole tumors in the context of vasculature using using 3D Histology (tissue clearing + lightsheet microscopy).**
-
-To obtain estimate  biologic penetration in tumors in the context of vasculature we developed an image analysis pipeline broadly based on prior work by Dobosz et al.[^1] We share our modular python-based image analysis approach for other researchers. 
 
 Our lightsheet image analysis pipeline consisted of four main steps – Blood vessels segmentation, Tumour boundary segmentation, Vascular distance map creation, and Data aggregation, respectively. In this section, we describe each step of the pipeline individually
 
@@ -12,37 +12,34 @@ Our lightsheet image analysis pipeline consisted of four main steps – Blood ve
 <!-- ![image](/images/pipeline.png =100x20) -->
 <!-- <img src="/images/pipeline.png" width="2000"> -->
 
-![](../images/pipeline.png)
+<!-- ![](../images/pipeline.png) -->
 <img src="../images/pipeline.png">
 
 
 
-### Analysis Pipeline Steps:
+## Analysis Pipeline Steps:
 
-### Blood vessel detection:
-* Vasculature in cleared tumors was immunolabeled using an anti-CD31 primary antibody and a fluorophore tagged secondary antibody. Images acquired in the vascular fluorescence channel need to be segmented to identify blood vessels (foreground) from background. 
-* Variability in vascular fluorescence intensities makes segmentation challenging. A variety of segmentation methods were tested including simple intensity based thresholding, random forest based machine learning, and deep learning. 
-* Once images have been segmented to create a binary mask of blood vessels and subsequently segmented digital objects, various quantitative attributes of the vessels such as location, size, etc. can extracted. This is also a critical step to support creation of distance maps in subsequent steps. 
+### Tumor blood vessel segmentation:
+The fluorescence channel detecting CD31 +ve tumor blood vessels in lightsheet images is segmented in order to obtain binary masks of the vessels. The binary masks then enable further quatification of vascular volume in the tumor and measurement of drug penetration away from tumor vasculature. 
 
 * Code implementation can be found in (**segmentation.py**) [see segmentation module documentation and examples](Modules/segmentation.md).
 
 
-### Tumor segmentation:
-* Tumor tissue (foreground) can be detected from background by labeling all cell nuclei with a nuclear stain/DNA intercalating dye. 
-* Once images have been segmented to create a binary mask of tumor tissue and subsequently a digital object, quantitative attributes such as tumor size and boundary can be extracted. 
-* Segmented tumors may be post-processed (e.g. split into tumor core and periphery regions).
+
+### Tumor boundary segmentation:
+The fluorescence channel detecting Syto16 stained cell nuclei in lightsheet images is segmented to obtain a binary mask of the whole tumor to enable detection of the tumor boundary. The tumor region can also be divided into tumor core and periphery via further post-processing to enable comparison between physiologically relevant locations. 
 
 * Code implementation can be found in (**segmentation.py**) [see segmentation module documentation and examples](Modules/segmentation.md).
 
-### Distance map:
-* A 3D distance map is created to calculate the penetration of the antibody from the tumor vessels into the surrounding tissue. In this case, the distance transform operator, assigns each blood vessel pixel/voxel of the binary image with the distance to the nearest blood vessel pixel/voxel. 
+### Vascular distance map creation: 
+Following blood vessel and tumor tissue segmentation, we computed a distance map to characterize drug penetration from tumor blood vessels into neighboring tissue. In this step each pixel was assigned the distance to the nearest blood vessel. 
 
 * Documentation and examples of distance transform module (**distance_transform.py**) script. [Documentation and examples of distance transfrom module](Modules/distance_transform.md).
 
 
 ### Collect and aggregate data:
-* Once the distance transform of blood vessels is calculated and tumor are segmented into masks.
-* A final profile of drug intensity vs distance from vessel wall can be calculated.
+In the final step of the tumor lightsheet data analysis pipeline, outputs from previous steps are aggregated to support interpretation. 
+
 * [see profiles module documentation and examples](Modules/profiles.md).
 
 
