@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#description" class="md-skip">
+        <a href="#3d-tumor-lightsheet-analysis-pipeline" class="md-skip">
           Skip to content
         </a>
       
@@ -241,43 +241,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
+  <a href="#3d-tumor-lightsheet-analysis-pipeline" class="md-nav__link">
+    3D Tumor Lightsheet Analysis Pipeline
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development-team" class="md-nav__link">
-    Development Team
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#copyright" class="md-nav__link">
-    Copyright
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#refs" class="md-nav__link">
-    Refs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -296,43 +262,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Methodology Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Methodology Overview" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Methodology Overview
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="methodology_overview/" class="md-nav__link">
-        Methodology overview
+        Methodology Overview:
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -354,14 +287,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Code Overview
+          Code Documentation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Code Overview" data-md-level="1">
+      <nav class="md-nav" aria-label="Code Documentation" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Code Overview
+          Code Documentation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -371,8 +304,22 @@
   
   
     <li class="md-nav__item">
-      <a href="prerequisites/" class="md-nav__link">
-        Prerequisites
+      <a href="code%20overview/" class="md-nav__link">
+        Code overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Code%20use%20pre-requisites%20and%20Installation%20instructions/" class="md-nav__link">
+        Code use pre requisites and Installation instructions
       </a>
     </li>
   
@@ -401,6 +348,20 @@
     <li class="md-nav__item">
       <a href="config/" class="md-nav__link">
         Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="install/" class="md-nav__link">
+        Install
       </a>
     </li>
   
@@ -543,43 +504,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
+  <a href="#3d-tumor-lightsheet-analysis-pipeline" class="md-nav__link">
+    3D Tumor Lightsheet Analysis Pipeline
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development-team" class="md-nav__link">
-    Development Team
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#copyright" class="md-nav__link">
-    Copyright
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#refs" class="md-nav__link">
-    Refs
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -602,19 +529,9 @@
                 
                   <h1>Home</h1>
                 
-                <h2 id="description">Description</h2>
-<p>This repo provides code for <strong>3D Histology applications for drug discovery</strong> paper.</p>
-<p><strong>A custom data analysis pipeline was developed to enable rapid analysis of tumor lightsheet datasets. Key goals of this analysis pipeline are:</strong></p>
-<ul>
-<li>Enable extraction of quantitative readouts regarding drug penetration in whole tumors from lightsheet data sets. See Dobosz et al. 2014., Neoplasia<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for reference. </li>
-<li>Use python programming to make use of open source packages that can support building a custom pipeline.</li>
-<li>Use cloud computing environment (Merck High Performance Computing Resources) to enable rapid analysis of very large lightsheet data sets. </li>
-<li>
-<p>Develop an analysis pipeline with two run modes:</p>
-<p>a) Automatic run mode: enables executing full analysis pipeline on a new data set via a single line of code</p>
-<p>b) Lego Brick mode: enables re-using parts of the analysis pipeline for building new analysis methods. </p>
-</li>
-</ul>
+                <h2 id="3d-tumor-lightsheet-analysis-pipeline">3D Tumor Lightsheet Analysis Pipeline</h2>
+<p>This document provides instructions on operating a lightsheet imaging data analysis pipeline for extraction of quantitative readouts regarding vascular volume and drug penetration in tumors. Any technical questions regarding the use of this code can be submitted as a GitHub repository issue.  </p>
+<p>Use case demonstrating the application of this tumor lightsheet image analysis pipeline can be found in the manuscript mentioned below: </p>
 <hr />
 <p>Learn more in our publication:</p>
 <p><strong><em>Title: <br />
@@ -624,48 +541,6 @@ High-Resolution ex vivo tissue clearing, lightsheet imaging, and data analysis t
 <p>Niyanta Kumar, Petr Hrobař, Martin Vagenknecht, Jindrich Soukup, Peter Bloomingdale, Tomoko Freshwater, Sophia Bardehle, Roman Peter, Nadia Patterson, Ruban Mangadu, Cinthia Pastuskovas, and Mark Cancilla
 <br /><br /><strong><em>Merck &amp; Co., Inc.</em></strong></p>
 <hr />
-<h2 id="development-team">Development Team</h2>
-<p>In case of need of any editional (technical) information reach out to the development team via <strong>github's issue</strong>:</p>
-<ul>
-<li>Martin Vagenknech (Merck &amp; Co., Inc.)</li>
-<li>Petr Hrobar (Merck &amp; Co., Inc.)</li>
-<li>Jindrich Soukup (Merck &amp; Co., Inc.)</li>
-</ul>
-<hr />
-<h2 id="installation">Installation</h2>
-<p>Repo is a python package. Installation process can be automated via bash <code>.sh</code> file in the <code>environment_setup</code> folder.</p>
-<p>When installing the package:</p>
-<ul>
-<li>
-<p>MAC/LINUX Users</p>
-<p>1) Make sure you have a python installed on your computer.
-if not you may use <code>set_python.sh</code> file
-Run in the terminal:
-<div class="highlight"><pre><span></span><code><span class="nb">source</span> environment_setup/set_python.sh
-</code></pre></div></p>
-<p>2) Create a python environment<br />
-Run in the terminal:
-<div class="highlight"><pre><span></span><code><span class="nb">source</span> environment_setup/set_3d_infrastructure.sh
-</code></pre></div></p>
-</li>
-<li>
-<p>Windows Users
-    1) Make sure you have a python installed on your computer.
-    if not, you may use <a href="https://docs.conda.io/en/latest/miniconda.html">this link.</a></p>
-<p>2) Create a python environment run all lines of <code>environment_setup/set_3d_infrastructure.sh</code> manually in the terminal</p>
-</li>
-</ul>
-<h4 id="copyright">Copyright</h4>
-<p>Copyright © 2022 Merck &amp; Co., Inc., Kenilworth, NJ, USA and its affiliates. All rights reserved.</p>
-<h4 id="refs">Refs</h4>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>Dobosz, M., Ntziachristos, V., Scheuer, W. &amp; Strobel, S. <strong>Multispectral Fluorescence Ultramicroscopy: Three-Dimensional Visualization and Automatic Quantification of Tumor Morphology, Drug Penetration, and Antiangiogenic Treatment Response</strong>. Neoplasia 16, 1-U24, doi:10.1593/neo.131848 (2014).*&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
                 
               
               
@@ -686,13 +561,13 @@ Run in the terminal:
       
       
         
-        <a href="methodology_overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Methodology overview" rel="next">
+        <a href="methodology_overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Methodology Overview:" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Methodology overview
+              Methodology Overview:
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -224,43 +224,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Methodology Overview
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Methodology Overview" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Methodology Overview
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../methodology_overview/" class="md-nav__link">
-        Methodology overview
+        Methodology Overview:
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -284,14 +251,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Code Overview
+          Code Documentation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Code Overview" data-md-level="1">
+      <nav class="md-nav" aria-label="Code Documentation" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Code Overview
+          Code Documentation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -301,8 +268,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../prerequisites/" class="md-nav__link">
-        Prerequisites
+      <a href="../code%20overview/" class="md-nav__link">
+        Code overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Code%20use%20pre-requisites%20and%20Installation%20instructions/" class="md-nav__link">
+        Code use pre requisites and Installation instructions
       </a>
     </li>
   
@@ -424,6 +405,20 @@
     <li class="md-nav__item">
       <a href="../config/" class="md-nav__link">
         Config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        Install
       </a>
     </li>
   
@@ -705,10 +700,10 @@ Entire process is fully automated and uses <strong>config.json</strong> file.
 See <a href="../config/">Config file documentation</a></p>
 <h4 id="main.main--parameters">Parameters</h4>
 <p><strong>config_path</strong> : <em>(pathlib.PosixPath)</em> Relative path to the config file defining the entire process (Notice the expected folder structure).</p>
-<div class="highlight"><pre><span></span><code>ppdm
+<div class="highlight"><pre><span></span><code>3D_Tumor_Lightsheet_Analysis_Pipeline
 └─ data
-   └─ 5IT_STUDY
-        └─ **config.json**
+   └─ your_study_name
+        └─ config.json
         └─ <span class="nb">source</span>
             └─raw
                └─tumor
@@ -748,10 +743,10 @@ See <a href="../config/">Config file documentation</a></p>
 <span class="sd">    **config_path** : *(pathlib.PosixPath)* Relative path to the config file defining the entire process (Notice the expected folder structure).</span>
 
 <span class="sd">    ```bash</span>
-<span class="sd">    ppdm</span>
+<span class="sd">    3D_Tumor_Lightsheet_Analysis_Pipeline</span>
 <span class="sd">    └─ data</span>
-<span class="sd">       └─ 5IT_STUDY</span>
-<span class="sd">            └─ **config.json**</span>
+<span class="sd">       └─ your_study_name</span>
+<span class="sd">            └─ config.json</span>
 <span class="sd">            └─ source</span>
 <span class="sd">                └─raw</span>
 <span class="sd">                   └─tumor</span>
@@ -907,7 +902,7 @@ See <a href="../config/">Config file documentation</a></p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../prerequisites/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prerequisites" rel="prev">
+        <a href="../Code%20use%20pre-requisites%20and%20Installation%20instructions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Code use pre requisites and Installation instructions" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -916,7 +911,7 @@ See <a href="../config/">Config file documentation</a></p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Prerequisites
+              Code use pre requisites and Installation instructions
             </div>
           </div>
         </a>
