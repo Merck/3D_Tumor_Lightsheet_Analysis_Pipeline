@@ -6,15 +6,21 @@ All Changeble parameters are listed bellow:
 
 | Main Key                      | method/value | method_parameters                              |   |   |
 |-------------------------------|-------------------|----------------------------------------|---|---|
-| **segmentation_method_tumor** | **thresholding**  | **method**: [th_triangle,th_yen,th_otsu]   |   |   |
-| **segmentation_method_vessel** | **random_forest** | **model_file**: relative path              |   |   |
-|                               | **unet**          | **model_file**: relative path              |   |   |
-|                               | **thresholding**  | **method**: [th_triangle,th_yen,th_otsu]   |   |   |
+| **segmentation_method_tumor[^1]** | **thresholding[^2]**  | **method**: [th_triangle,th_yen,th_otsu]   |   |   |
+| **segmentation_method_vessel[^1]** | **random_forest[^2]** | **model_file**: relative path              |   |   |
+|                               | **unet[^2]**          | **model_file**: relative path              |   |   |
+|                               | **thresholding[^2]**  | **method**: [th_triangle,th_yen,th_otsu]   |   |   |
 | **segmentation_postprocessing_tumor** | **split_tumor_into_core_and_periphery** | **periphery_as_ratio_of_max_distance**:<0; 1>               |   |   |
 | **distance_tranform** |  | **stack_size**: int              |   |   |
 | **pixels_to_microns** | float  |               |   |   |
 | **mlflow_logging** | bool  |               |   |   |
 | **mlflow_run_name** | str  |               |   |   |
+
+[^1]: [see pipeline overview](methodology_overview.md)
+[^2]: [see segmentation module documentation and examples](Modules/segmentation.md)
+
+
+# 
 
 #### Example of possible config.json file.
 
@@ -47,3 +53,4 @@ All Changeble parameters are listed bellow:
 }
 
 ```
+

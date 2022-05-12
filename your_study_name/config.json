@@ -1,0 +1,26 @@
+{
+    "segmentation_method_tumor": {  
+        "method": "thresholding",          # Select segmentation method for tumor channel (here "thresholding")
+        "method_parameters": {
+            "method": "th_triangle"        # What thresholding method to use: yen, triangle, otsu...
+        }
+    },
+    "segmentation_method_vessel": {  
+        "method": "unet",                 # What method to use for blood vessels segmentation
+        "method_parameters": {
+            "model_file": "ppdm/data/unet_model.pt", # path to the pre-trained model
+        }
+    },
+    "segmentation_postprocessing_tumor": {               # Tumor postprocesing - splitting the brains to core and periphery
+        "method": "split_tumor_into_core_and_periphery", # Split tumor to the core and periphery
+        "method_parameters": {}                          # No parameter necessary for this method - defaults to 0.2 (20 percent core, 80 periphery)
+    },
+    "distance_tranform": {                      # (Outer) Distance Transform for the blood vessels distance
+        "method_parameters": {                  # How many layers stacked together inside DT aggregation
+            "stack_size": 100
+        }
+    }
+    "pixels_to_microns": 4,     # Multiplication constant for converting pixels to micrones
+    "mlflow_logging": true      # Bool parameters if the results should be saved to mlflow.
+    "mlflow_run_name": "DEMO"   # Name of the experiment which should be used for the logging
+}
