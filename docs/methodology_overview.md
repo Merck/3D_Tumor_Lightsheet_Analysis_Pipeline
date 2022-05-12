@@ -1,5 +1,5 @@
 
-# Methodology Overview:  
+# Methodology Overview  
 
 A detailed description of the tumor lightsheet image analysis pipeline is provided in the methods section of the manuscript by Kumar et al. 2022. Briefly, this tumor lightsheet image analysis method comprised of four main steps that accomplish: 
 
