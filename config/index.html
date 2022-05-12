@@ -226,7 +226,7 @@
   
     <li class="md-nav__item">
       <a href="../methodology_overview/" class="md-nav__link">
-        Methodology Overview:
+        Methodology Overview
       </a>
     </li>
   
@@ -348,9 +348,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+    <nav class="md-nav" aria-label="">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#example-of-possible-configjson-file" class="md-nav__link">
     Example of possible config.json file.
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -369,8 +382,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
-        Install
+      <a href="../Installation%20Process/" class="md-nav__link">
+        Installation Process
       </a>
     </li>
   
@@ -520,9 +533,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+    <nav class="md-nav" aria-label="">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#example-of-possible-configjson-file" class="md-nav__link">
     Example of possible config.json file.
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -543,8 +569,6 @@
                   </a>
                 
                 
-                  <h1>Config</h1>
-                
                 <p>Config file contains an entire setting for the automated analysis via <strong>main.py</strong> file and <strong>master_script.py</strong>. It allows changing methods for blood vessels segmentation as well as changing pre-trained models to use.</p>
 <h4 id="configjson-file">config.json file</h4>
 <p>All Changeble parameters are listed bellow:</p>
@@ -560,29 +584,29 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>segmentation_method_tumor</strong></td>
-<td><strong>thresholding</strong></td>
+<td><strong>segmentation_method_tumor<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></strong></td>
+<td><strong>thresholding<sup id="fnref4:2"><a class="footnote-ref" href="#fn:2">2</a></sup></strong></td>
 <td><strong>method</strong>: [th_triangle,th_yen,th_otsu]</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><strong>segmentation_method_vessel</strong></td>
-<td><strong>random_forest</strong></td>
+<td><strong>segmentation_method_vessel<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></strong></td>
+<td><strong>random_forest<sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></strong></td>
 <td><strong>model_file</strong>: relative path</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><strong>unet</strong></td>
+<td><strong>unet<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></strong></td>
 <td><strong>model_file</strong>: relative path</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td><strong>thresholding</strong></td>
+<td><strong>thresholding<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></strong></td>
 <td><strong>method</strong>: [th_triangle,th_yen,th_otsu]</td>
 <td></td>
 <td></td>
@@ -624,6 +648,7 @@
 </tr>
 </tbody>
 </table>
+<h1 id="_1"></h1>
 <h4 id="example-of-possible-configjson-file">Example of possible config.json file.</h4>
 <div class="highlight"><pre><span></span><code><span class="o">{</span>
     <span class="s2">&quot;segmentation_method_tumor&quot;</span>: <span class="o">{</span>  
@@ -652,6 +677,17 @@
     <span class="s2">&quot;mlflow_run_name&quot;</span>: <span class="s2">&quot;DEMO&quot;</span>   <span class="c1"># Name of the experiment which should be used for the logging</span>
 <span class="o">}</span>
 </code></pre></div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="../methodology_overview/">see pipeline overview</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="../Modules/segmentation/">see segmentation module documentation and examples</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
@@ -687,13 +723,13 @@
       
       
         
-        <a href="../install/" class="md-footer__link md-footer__link--next" aria-label="Next: Install" rel="next">
+        <a href="../Installation%20Process/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation Process" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Install
+              Installation Process
             </div>
           </div>
           <div class="md-footer__button md-icon">
