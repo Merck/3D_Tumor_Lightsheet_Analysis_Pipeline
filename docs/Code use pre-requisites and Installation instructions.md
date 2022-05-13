@@ -11,12 +11,12 @@ Each of these pre-requisites are described in detail below.
 
 #### A) Installation of the required python environment:  
 
-* Guide for the installation [can be found at this link](install.md)
+* Guide for the installation [can be found at this link](Installation Process.md)
 
-#### B)Folder Structure
+#### B) Folder Structure
 
 Due to the large size of the lightsheet datasets, the code is written to allow output from each step of the analysis pipeline to directly save the results to the hard disk. These 
-results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: 
+results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: WHATISTHE HARDWARE ADN HPC HARDVARE
 
 3D_Tumor_Lightsheet_Analysis_Pipeline  (can be replaced with your root directory name) 
 * When analyzing one particular study, the following **folders structure** of three channels (vessels, tumors, virus) including the **config.json** file is expected.
@@ -51,7 +51,7 @@ results can then be immediately loaded into memory. The main reason for this app
 
 * In this example the root directory is called ‘3D_Tumor_Lightsheet_Analysis_Pipeline’.  
 
-* The lightsheet data is placed in a folder called ‘data’ and can datasets can be organized by study name. For instance, in this example, ‘5IT’ is a folder containing a lightsheet dataset for a single tumor. Within this folder there are sub-folders with tiff files for each of the three fluorescence channels detecting a marker of interest.  
+* The lightsheet data is placed in a folder called ‘data’ and datasets can be organized by study name. For instance, in this example, ‘5IT’ is a folder containing a lightsheet dataset for a single tumor. Within this folder there are sub-folders with tiff files for each of the three fluorescence channels detecting a marker of interest.  
 
     * **tumor**:  this sub-folder has images with a cell nuclei stain such as syto16, which will be used to delineate the tumor boundary.  
 
@@ -59,7 +59,7 @@ results can then be immediately loaded into memory. The main reason for this app
 
     * **virus**: this sub-folder has images obtained following immunohistochemical labeling using a marker to detect the biologic of interest. In our use case the biologic of interest is an oncolytic virus, and therefore the sub-folder is named as such. 
 
-* Each tiff file represents a single z plane for within a specific marker/fluorescence channel. Therefore, it is recommended that file names incorporate information on study name, channel, and z plane information. E.g., 5IT-4X_Ch1_z0001, where: 
+* Each tiff file represents a single z plane within a specific marker/fluorescence channel. Therefore, it is recommended that file names incorporate information on study name, channel, and z plane information. E.g., 5IT-4X_Ch1_z0001, where: 
 
     * ‘5IT’ represents study name 
 
@@ -71,7 +71,7 @@ results can then be immediately loaded into memory. The main reason for this app
 
 * Tiff files for each channel should have the same pixel resolution, format, and dimensions.  
 
-* **NOTE**: The above recommended folder structure is required only when using the fully automated operation mode of the analysis pipeline. However, we recommend uttilizing this structure as a best practice even when using the code in a manual mode of operation where individual modules may be run separately allowing further customization. 
+* **NOTE**: The above recommended folder structure is required only when using the fully automated operation mode of the analysis pipeline. However, we recommend utilizing this structure as a best practice even when using the code in a manual mode of operation where individual modules may be run separately allowing further customization. 
 
 #### C) Creation of a configuration (.json file): 
 

@@ -33,7 +33,7 @@ def main(config_path: pathlib.PosixPath) -> None:
     """
 
     Main Function for the entire pipeline for automated usage.
-    It wraps entire pipeline into one function which can be source from the terminal.
+    It wraps the entire pipeline into one function which can be sourced from the terminal.
     Entire process is fully automated and uses **config.json** file.
     See [Config file documentation](config.md)
 
@@ -66,10 +66,10 @@ def main(config_path: pathlib.PosixPath) -> None:
     Returns
     ------
 
-    Results are dumbed on the disk (segmented masks, distance transform) and save to mlflow (if provided in config).
+    Results are saved on the disk (segmented masks, distance transform) and saved to mlflow (if provided in config).
 
 
-    Example Usuage
+    Example Usage
     --------------
 
     ```python

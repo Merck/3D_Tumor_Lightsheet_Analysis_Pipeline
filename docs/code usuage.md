@@ -9,7 +9,7 @@ The code can be operated in 2 separated ways:
 
 ** 1)Fully automated pipeline**
 
-which analyzis entire study automaticaly and loggs the results (final profiles) into mlflow. (All middle steps e.g. segmented masks are dumped in the disk).
+which analyzes entire study automaticaly and logs the results (final profiles) into mlflow. (All middle steps e.g. segmented masks are stored on the hard disk).
 
 This approach requires the usage of **config.json** file, which contains details regarding the pipeline settings [(see config page)](config.md).
 
