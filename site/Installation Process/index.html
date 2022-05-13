@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/install/">
+        <link rel="canonical" href="https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/Installation%20Process/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>Install - 3D vasculiciar Analysis</title>
+        <title>Installation Process - 3D vasculiciar Analysis</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#installation-process" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install
+              Installation Process
             
           </span>
         </div>
@@ -226,7 +226,7 @@
   
     <li class="md-nav__item">
       <a href="../methodology_overview/" class="md-nav__link">
-        Methodology Overview:
+        Methodology Overview
       </a>
     </li>
   
@@ -332,12 +332,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Install
+          Installation Process
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Install
+        Installation Process
       </a>
       
         
@@ -355,9 +355,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+  <a href="#installation-process" class="md-nav__link">
+    Installation Process
   </a>
+  
+    <nav class="md-nav" aria-label="Installation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-code-download" class="md-nav__link">
+    1) Code Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dependencies-installation" class="md-nav__link">
+    2) Dependencies Installation:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -506,9 +526,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+  <a href="#installation-process" class="md-nav__link">
+    Installation Process
   </a>
+  
+    <nav class="md-nav" aria-label="Installation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-code-download" class="md-nav__link">
+    1) Code Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dependencies-installation" class="md-nav__link">
+    2) Dependencies Installation:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -524,34 +564,43 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Merck/3D_Tumor_Lightsheet_Analysis_Pipeline/edit/master/docs/install.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Merck/3D_Tumor_Lightsheet_Analysis_Pipeline/edit/master/docs/Installation Process.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Install</h1>
+                  <h1>Installation Process</h1>
                 
-                <h2 id="installation">Installation</h2>
+                <h2 id="installation-process"><strong>Installation Process</strong></h2>
 <p>Repo is a python package. Installation process can be automated via bash <code>.sh</code> file in the <code>environment_setup</code> folder.</p>
+<h3 id="1-code-download">1) <strong>Code Download</strong></h3>
+<p>Firtsly Download the REPO (Entire project in one folder) by running:
+<div class="highlight"><pre><span></span><code><span class="c1"># Clone The repo localy to your computer</span>
+git clone https://github.com/Merck/3D_Tumor_Lightsheet_Analysis_Pipeline.git
+
+<span class="c1"># Navigate to the repo folder</span>
+<span class="nb">cd</span> 3D_Tumor_Lightsheet_Analysis_Pipeline
+</code></pre></div></p>
+<h3 id="2-dependencies-installation">2) <strong>Dependencies Installation</strong>:</h3>
 <p>When installing the package:</p>
 <ul>
 <li>
-<p>MAC/LINUX Users</p>
-<p>1) Make sure you have a python installed on your computer.
+<p><strong>MAC/LINUX Users</strong></p>
+<p>2.1) Make sure you have a python installed on your computer.
 if not you may use <code>set_python.sh</code> file
 Run in the terminal:
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> environment_setup/set_python.sh
 </code></pre></div></p>
-<p>2) Create a python environment<br />
+<p>2.2) Create a python environment<br />
 Run in the terminal:
 <div class="highlight"><pre><span></span><code><span class="nb">source</span> environment_setup/set_3d_infrastructure.sh
 </code></pre></div></p>
 </li>
 <li>
-<p>Windows Users
-    1) Make sure you have a python installed on your computer.
-    if not, you may use <a href="https://docs.conda.io/en/latest/miniconda.html">this link.</a></p>
-<p>2) Create a python environment run all lines of <code>environment_setup/set_3d_infrastructure.sh</code> manually in the terminal</p>
+<p><strong>Windows Users</strong></p>
+<p>2.1) Make sure you have a python installed on your computer.
+if not, you may use <a href="https://docs.conda.io/en/latest/miniconda.html">this link.</a></p>
+<p>2.2) Create a python environment run all lines of <code>environment_setup/set_3d_infrastructure.sh</code> manually in the terminal</p>
 </li>
 </ul>
                 

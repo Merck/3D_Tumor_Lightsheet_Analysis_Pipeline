@@ -1,6 +1,8 @@
 ## 3D Tumor Lightsheet Analysis Pipeline
 
-This document provides instructions on operating a lightsheet imaging data analysis pipeline for extraction of quantitative readouts regarding vascular volume and drug penetration in tumors. Any technical questions regarding the use of this code can be submitted as a GitHub repository issue.  
+This document provides instructions on operating a lightsheet imaging data analysis pipeline for extraction of quantitative readouts regarding vascular volume and drug penetration in tumors. 
+
+Any technical questions regarding the use of this code can be submitted as a GitHub repository issue.  
 
  
 
@@ -8,15 +10,15 @@ Use case demonstrating the application of this tumor lightsheet image analysis p
 
 
 ***
-Learn more in our publication:
+**Learn more in our publication**:
 
 
 
 
 
-***Title: <br />
+*Title: <br />
 High-Resolution ex vivo tissue clearing, lightsheet imaging, and data analysis to support macromolecular drug and biomarker distribution in whole organs and tumors. <br /> <br /> Short Tile:<br />
-3D Histology applications for drug discovery.***
+3D Histology applications for drug discovery.*
 
 
 **Authors:<br />**

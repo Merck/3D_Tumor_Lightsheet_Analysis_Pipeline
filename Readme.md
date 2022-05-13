@@ -1,6 +1,6 @@
 ## Description
 
-This repo provides code for **3D Histology applications for drug discovery** paper.
+This repo provides code for lightsheet imaging data analysis pipeline for extraction of quantitative readouts regarding vascular volume and drug penetration in tumors.
 
 **A custom data analysis pipeline was developed to enable rapid analysis of tumor lightsheet datasets. Key goals of this analysis pipeline are:**
 

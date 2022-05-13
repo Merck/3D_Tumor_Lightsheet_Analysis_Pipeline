@@ -15,7 +15,8 @@ Each of these pre-requisites are described in detail below.
 
 #### B)Folder Structure
 
-Due to the large size of lightsheet datasets, the code is written so as to allow output from each step in the analysis pipeline to directly save results on the hard disk. This overcomes the limitation of limited RAM. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: 
+Due to the large size of the lightsheet datasets, the code is written to allow output from each step of the analysis pipeline to directly save the results to the hard disk. These 
+results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: 
 
 3D_Tumor_Lightsheet_Analysis_Pipeline  (can be replaced with your root directory name) 
 * When analyzing one particular study, the following **folders structure** of three channels (vessels, tumors, virus) including the **config.json** file is expected.
@@ -74,7 +75,7 @@ Due to the large size of lightsheet datasets, the code is written so as to allow
 
 #### C) Creation of a configuration (.json file): 
 
-* A configuration file with a ‘.json’ file extension needs to be included in the dataset folder, in order to provide input on data acquisition and analysis parameters. These parameters incude details such as voxel size, choice of segmentation method (e.g., thresholding vs machine-learning based) among others.  
+* A configuration file with a **.json** file extension needs to be included in the dataset folder, in order to provide input on data acquisition and analysis parameters. These parameters incude details such as voxel size, choice of segmentation method (e.g., thresholding vs machine-learning based) among others.  
 
 * A detailed list of relevant parameters that need to be specifed in the configuration file are listed below, followed by an example of the .json file itself.  
 
