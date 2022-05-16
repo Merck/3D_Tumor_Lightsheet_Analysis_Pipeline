@@ -16,7 +16,7 @@
     
     
       
-        <title>Code usuage - 3D vasculiciar Analysis</title>
+        <title>Code usuage - 3D Tumor Lightsheet Analysis Pipeline</title>
       
     
     
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="3D vasculiciar Analysis" class="md-header__button md-logo" aria-label="3D vasculiciar Analysis" data-md-component="logo">
+    <a href=".." title="3D Tumor Lightsheet Analysis Pipeline" class="md-header__button md-logo" aria-label="3D Tumor Lightsheet Analysis Pipeline" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -91,7 +91,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            3D vasculiciar Analysis
+            3D Tumor Lightsheet Analysis Pipeline
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -178,13 +178,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="3D vasculiciar Analysis" class="md-nav__button md-logo" aria-label="3D vasculiciar Analysis" data-md-component="logo">
+    <a href=".." title="3D Tumor Lightsheet Analysis Pipeline" class="md-nav__button md-logo" aria-label="3D Tumor Lightsheet Analysis Pipeline" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    3D vasculiciar Analysis
+    3D Tumor Lightsheet Analysis Pipeline
   </label>
   
     <div class="md-nav__source">
@@ -370,8 +370,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#main.main--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#main.main--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -604,8 +604,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#main.main--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#main.main--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -648,7 +648,7 @@
 <li>2) Manual Usage of Modules</li>
 </ul>
 <p><strong> 1)Fully automated pipeline</strong></p>
-<p>which analyzis entire study automaticaly and loggs the results (final profiles) into mlflow. (All middle steps e.g. segmented masks are dumped in the disk).</p>
+<p>which analyzes entire study automaticaly and logs the results (final profiles) into mlflow. (All middle steps e.g. segmented masks are stored on the hard disk).</p>
 <p>This approach requires the usage of <strong>config.json</strong> file, which contains details regarding the pipeline settings <a href="../config/">(see config page)</a>.</p>
 <p>Once the <strong>config.json</strong> is prepared, the code can be used via 2 files:</p>
 <ul>
@@ -695,7 +695,7 @@ module to run the whole pipleline</p>
     <div class="doc doc-contents ">
 
       <p>Main Function for the entire pipeline for automated usage.
-It wraps entire pipeline into one function which can be source from the terminal.
+It wraps the entire pipeline into one function which can be sourced from the terminal.
 Entire process is fully automated and uses <strong>config.json</strong> file.
 See <a href="../config/">Config file documentation</a></p>
 <h4 id="main.main--parameters">Parameters</h4>
@@ -720,8 +720,8 @@ See <a href="../config/">Config file documentation</a></p>
                    └─5IT-4X_Ch1_z1300.tiff
 </code></pre></div>
 <h4 id="main.main--returns">Returns</h4>
-<p>Results are dumbed on the disk (segmented masks, distance transform) and save to mlflow (if provided in config).</p>
-<h4 id="main.main--example-usuage">Example Usuage</h4>
+<p>Results are saved on the disk (segmented masks, distance transform) and saved to mlflow (if provided in config).</p>
+<h4 id="main.main--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="n">conda</span> <span class="n">activate</span> <span class="mi">3</span><span class="n">d</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">Config</span> <span class="n">File</span><span class="p">:</span> <span class="n">data</span><span class="o">/</span><span class="mi">5</span><span class="n">IT_DUMMY_STUDY</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">json</span>
 </code></pre></div>
@@ -733,7 +733,7 @@ See <a href="../config/">Config file documentation</a></p>
     <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    Main Function for the entire pipeline for automated usage.</span>
-<span class="sd">    It wraps entire pipeline into one function which can be source from the terminal.</span>
+<span class="sd">    It wraps the entire pipeline into one function which can be sourced from the terminal.</span>
 <span class="sd">    Entire process is fully automated and uses **config.json** file.</span>
 <span class="sd">    See [Config file documentation](config.md)</span>
 
@@ -766,10 +766,10 @@ See <a href="../config/">Config file documentation</a></p>
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 
-<span class="sd">    Results are dumbed on the disk (segmented masks, distance transform) and save to mlflow (if provided in config).</span>
+<span class="sd">    Results are saved on the disk (segmented masks, distance transform) and saved to mlflow (if provided in config).</span>
 
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 
 <span class="sd">    ```python</span>

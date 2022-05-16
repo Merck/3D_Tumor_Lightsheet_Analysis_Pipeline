@@ -16,7 +16,7 @@ Each of these pre-requisites are described in detail below.
 #### B) Folder Structure
 
 Due to the large size of the lightsheet datasets, the code is written to allow output from each step of the analysis pipeline to directly save the results to the hard disk. These 
-results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: WHATISTHE HARDWARE ADN HPC HARDVARE
+results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: 
 
 3D_Tumor_Lightsheet_Analysis_Pipeline  (can be replaced with your root directory name) 
 * When analyzing one particular study, the following **folders structure** of three channels (vessels, tumors, virus) including the **config.json** file is expected.
@@ -80,3 +80,29 @@ results can then be immediately loaded into memory. The main reason for this app
 * A detailed list of relevant parameters that need to be specifed in the configuration file are listed below, followed by an example of the .json file itself.  
 
 * [See table of arguments](config.md).
+
+
+#### D) Hardware Setting
+
+The analysis was performed on the high perfomance computing (HPC) environment. Due to the nature of the code (storing all middle steps localy) it may be used on local computer as well.
+
+HPC hardware we had at disposal had is Cray CS Storm has following recources:
+
+8 GPU Nodes. Each node in the following configuration:
+
+* 8x V100 SXM2 32GB HBM2, NVLink 2
+* 2x CLX 6240, 18c, 2.6 GHz (150W)
+* 24x 32 GiB DDR4-2933; 768 GiB total
+* 4x P4510, NVMe SSD, 2.5”, 2 TB
+* 2x S4510, SATA SSD, 2.5”, 240 GB
+* 4x Mellanox CX-4, x8, VPI Single-Port, QSFP28
+
+
+On this setting we were able to analyze one study (containing roufly 1500 Z-planes) in 2 hour.
+
+We are fully aware that these recources are outside standart local computer. To operate the code on local computers we recommend the following MINIMAL Hardware Requirements:
+
+* CPU with 6 Cores
+* 16 GB RAM
+* 800 GB Storage for the Data
+* GPU is only required when deep learning model (UNET) is being used.

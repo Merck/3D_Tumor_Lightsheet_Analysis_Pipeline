@@ -16,7 +16,7 @@
     
     
       
-        <title>Code use pre requisites and Installation instructions - 3D vasculiciar Analysis</title>
+        <title>Code use pre requisites and Installation instructions - 3D Tumor Lightsheet Analysis Pipeline</title>
       
     
     
@@ -78,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="3D vasculiciar Analysis" class="md-header__button md-logo" aria-label="3D vasculiciar Analysis" data-md-component="logo">
+    <a href=".." title="3D Tumor Lightsheet Analysis Pipeline" class="md-header__button md-logo" aria-label="3D Tumor Lightsheet Analysis Pipeline" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -91,7 +91,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            3D vasculiciar Analysis
+            3D Tumor Lightsheet Analysis Pipeline
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -178,13 +178,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="3D vasculiciar Analysis" class="md-nav__button md-logo" aria-label="3D vasculiciar Analysis" data-md-component="logo">
+    <a href=".." title="3D Tumor Lightsheet Analysis Pipeline" class="md-nav__button md-logo" aria-label="3D Tumor Lightsheet Analysis Pipeline" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    3D vasculiciar Analysis
+    3D Tumor Lightsheet Analysis Pipeline
   </label>
   
     <div class="md-nav__source">
@@ -328,8 +328,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bfolder-structure" class="md-nav__link">
-    B)Folder Structure
+  <a href="#b-folder-structure" class="md-nav__link">
+    B) Folder Structure
   </a>
   
 </li>
@@ -337,6 +337,13 @@
           <li class="md-nav__item">
   <a href="#c-creation-of-a-configuration-json-file" class="md-nav__link">
     C) Creation of a configuration (.json file):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-hardware-setting" class="md-nav__link">
+    D) Hardware Setting
   </a>
   
 </li>
@@ -548,8 +555,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bfolder-structure" class="md-nav__link">
-    B)Folder Structure
+  <a href="#b-folder-structure" class="md-nav__link">
+    B) Folder Structure
   </a>
   
 </li>
@@ -557,6 +564,13 @@
           <li class="md-nav__item">
   <a href="#c-creation-of-a-configuration-json-file" class="md-nav__link">
     C) Creation of a configuration (.json file):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-hardware-setting" class="md-nav__link">
+    D) Hardware Setting
   </a>
   
 </li>
@@ -595,9 +609,9 @@
 <p>Each of these pre-requisites are described in detail below.  </p>
 <h4 id="a-installation-of-the-required-python-environment">A) Installation of the required python environment:</h4>
 <ul>
-<li>Guide for the installation <a href="install.md">can be found at this link</a></li>
+<li>Guide for the installation <a href="../Installation%20Process/">can be found at this link</a></li>
 </ul>
-<h4 id="bfolder-structure">B)Folder Structure</h4>
+<h4 id="b-folder-structure">B) Folder Structure</h4>
 <p>Due to the large size of the lightsheet datasets, the code is written to allow output from each step of the analysis pipeline to directly save the results to the hard disk. These 
 results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: </p>
 <p>3D_Tumor_Lightsheet_Analysis_Pipeline  (can be replaced with your root directory name) 
@@ -630,7 +644,7 @@ results can then be immediately loaded into memory. The main reason for this app
 <p>In this example the root directory is called ‘3D_Tumor_Lightsheet_Analysis_Pipeline’.  </p>
 </li>
 <li>
-<p>The lightsheet data is placed in a folder called ‘data’ and can datasets can be organized by study name. For instance, in this example, ‘5IT’ is a folder containing a lightsheet dataset for a single tumor. Within this folder there are sub-folders with tiff files for each of the three fluorescence channels detecting a marker of interest.  </p>
+<p>The lightsheet data is placed in a folder called ‘data’ and datasets can be organized by study name. For instance, in this example, ‘5IT’ is a folder containing a lightsheet dataset for a single tumor. Within this folder there are sub-folders with tiff files for each of the three fluorescence channels detecting a marker of interest.  </p>
 <ul>
 <li>
 <p><strong>tumor</strong>:  this sub-folder has images with a cell nuclei stain such as syto16, which will be used to delineate the tumor boundary.  </p>
@@ -644,7 +658,7 @@ results can then be immediately loaded into memory. The main reason for this app
 </ul>
 </li>
 <li>
-<p>Each tiff file represents a single z plane for within a specific marker/fluorescence channel. Therefore, it is recommended that file names incorporate information on study name, channel, and z plane information. E.g., 5IT-4X_Ch1_z0001, where: </p>
+<p>Each tiff file represents a single z plane within a specific marker/fluorescence channel. Therefore, it is recommended that file names incorporate information on study name, channel, and z plane information. E.g., 5IT-4X_Ch1_z0001, where: </p>
 <ul>
 <li>
 <p>‘5IT’ represents study name </p>
@@ -664,7 +678,7 @@ results can then be immediately loaded into memory. The main reason for this app
 <p>Tiff files for each channel should have the same pixel resolution, format, and dimensions.  </p>
 </li>
 <li>
-<p><strong>NOTE</strong>: The above recommended folder structure is required only when using the fully automated operation mode of the analysis pipeline. However, we recommend uttilizing this structure as a best practice even when using the code in a manual mode of operation where individual modules may be run separately allowing further customization. </p>
+<p><strong>NOTE</strong>: The above recommended folder structure is required only when using the fully automated operation mode of the analysis pipeline. However, we recommend utilizing this structure as a best practice even when using the code in a manual mode of operation where individual modules may be run separately allowing further customization. </p>
 </li>
 </ul>
 <h4 id="c-creation-of-a-configuration-json-file">C) Creation of a configuration (.json file):</h4>
@@ -678,6 +692,24 @@ results can then be immediately loaded into memory. The main reason for this app
 <li>
 <p><a href="../config/">See table of arguments</a>.</p>
 </li>
+</ul>
+<h4 id="d-hardware-setting">D) Hardware Setting</h4>
+<p>The analysis was performed on the high perfomance computing (HPC) environment. Due to the nature of the code (storing all middle steps localy) it may be used on local computer as well.</p>
+<p>HPC hardware we had at disposal had is Cray CS Storm has following recources:</p>
+<p>8 GPU Nodes. Each node in the following configuration:</p>
+<ul>
+<li>8x V100 SXM2 32GB HBM2, NVLink 2</li>
+<li>2x CLX 6240, 18c, 2.6 GHz (150W)</li>
+<li>24x 32 GiB DDR4-2933; 768 GiB total</li>
+<li>4x P4510, NVMe SSD, 2.5”, 2 TB</li>
+<li>2x S4510, SATA SSD, 2.5”, 240 GB</li>
+<li>4x Mellanox CX-4, x8, VPI Single-Port, QSFP28</li>
+</ul>
+<p>We are fully aware that these recources are outside standart local computer. To operate the code on local computers we recommend the following MINIMAL Hardware Requirements:</p>
+<ul>
+<li>CPU with 6 Cores</li>
+<li>16 GB RAM</li>
+<li>GPU is only required when deep learning model (UNET) is being used.</li>
 </ul>
                 
               

@@ -92,22 +92,18 @@ When installing the package:
 
     2.2) Create a python environment run all lines of `environment_setup/set_3d_infrastructure.sh` manually in the terminal
 
+# 
+### Hardware Requirements:
+To operate the code on local computers we recommend the following MINIMAL Hardware Requirements:
+
+* CPU with at least 6 Cores
+* 16 GB RAM
+* 800 GB Storage for the Data
+* GPU is only required when deep learning model (UNET) is being used.
 
 
 
-[16:11] Kumar, Niyanta
-Processing speed
-The comparison of processing speed measures the actual prediction speed of all models in a like-for-like setting. All tests were performed
-on the same hardware with 32 Intel Xeon E5-2620 v4 at 32x 3GHz processors, 252 GB of RAM and two Nvidia Titan V GPUs.
-To enables a fair and direct comparison, all data was already loaded into the RAM memory of the computer. The speed measurement
-comprises the segmentation of multiple patches and the connected component analysis for all 4 methods. Final speeds for each
-method were then averaged over the number of patches. Please note that the patch-wise processing ensures linear scaling of processing
-times.
-
-LOWER BOUND of COMPUTER
-
-
-
+#
 ### **Copyright**
 Copyright © 2022 Merck & Co., Inc., Kenilworth, NJ, USA and its affiliates. All rights reserved.
 
