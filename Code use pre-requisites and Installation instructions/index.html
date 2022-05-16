@@ -341,6 +341,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#d-hardware-setting" class="md-nav__link">
+    D) Hardware Setting
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -561,6 +568,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#d-hardware-setting" class="md-nav__link">
+    D) Hardware Setting
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -599,7 +613,7 @@
 </ul>
 <h4 id="b-folder-structure">B) Folder Structure</h4>
 <p>Due to the large size of the lightsheet datasets, the code is written to allow output from each step of the analysis pipeline to directly save the results to the hard disk. These 
-results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: WHATISTHE HARDWARE ADN HPC HARDVARE</p>
+results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: </p>
 <p>3D_Tumor_Lightsheet_Analysis_Pipeline  (can be replaced with your root directory name) 
 * When analyzing one particular study, the following <strong>folders structure</strong> of three channels (vessels, tumors, virus) including the <strong>config.json</strong> file is expected.</p>
 <ul>
@@ -678,6 +692,24 @@ results can then be immediately loaded into memory. The main reason for this app
 <li>
 <p><a href="../config/">See table of arguments</a>.</p>
 </li>
+</ul>
+<h4 id="d-hardware-setting">D) Hardware Setting</h4>
+<p>The analysis was performed on the high perfomance computing (HPC) environment. Due to the nature of the code (storing all middle steps localy) it may be used on local computer as well.</p>
+<p>HPC hardware we had at disposal had is Cray CS Storm has following recources:</p>
+<p>8 GPU Nodes. Each node in the following configuration:</p>
+<ul>
+<li>8x V100 SXM2 32GB HBM2, NVLink 2</li>
+<li>2x CLX 6240, 18c, 2.6 GHz (150W)</li>
+<li>24x 32 GiB DDR4-2933; 768 GiB total</li>
+<li>4x P4510, NVMe SSD, 2.5”, 2 TB</li>
+<li>2x S4510, SATA SSD, 2.5”, 240 GB</li>
+<li>4x Mellanox CX-4, x8, VPI Single-Port, QSFP28</li>
+</ul>
+<p>We are fully aware that these recources are outside standart local computer. To operate the code on local computers we recommend the following MINIMAL Hardware Requirements:</p>
+<ul>
+<li>CPU with 6 Cores</li>
+<li>16 GB RAM</li>
+<li>GPU is only required when deep learning model (UNET) is being used.</li>
 </ul>
                 
               
