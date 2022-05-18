@@ -294,8 +294,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code%20usuage/" class="md-nav__link">
-        Code usuage
+      <a href="../../code%20usage/" class="md-nav__link">
+        Code usage
       </a>
     </li>
   
@@ -473,8 +473,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.distance_transform--this-module-consists-of-four-main-functions" class="md-nav__link">
-    This module consists of four main functions:
+  <a href="#src.distance_transform--this-module-consists-of-one-main-functions" class="md-nav__link">
+    This module consists of one main functions:
   </a>
   
 </li>
@@ -517,8 +517,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.distance_transform.calculate_distance_tranform--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.distance_transform.calculate_distance_tranform--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -609,8 +609,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.distance_transform--this-module-consists-of-four-main-functions" class="md-nav__link">
-    This module consists of four main functions:
+  <a href="#src.distance_transform--this-module-consists-of-one-main-functions" class="md-nav__link">
+    This module consists of one main functions:
   </a>
   
 </li>
@@ -653,8 +653,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.distance_transform.calculate_distance_tranform--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.distance_transform.calculate_distance_tranform--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -691,7 +691,7 @@
 
       <h3 id="src.distance_transform--distance-transform-module">distance transform module:</h3>
 <h4 id="src.distance_transform--module-for-computing-distance-transform-on-segmented-masks">module for computing distance transform on segmented masks</h4>
-<h5 id="src.distance_transform--this-module-consists-of-four-main-functions">This module consists of four main functions:</h5>
+<h5 id="src.distance_transform--this-module-consists-of-one-main-functions">This module consists of one main functions:</h5>
 <ul>
 <li>calculate_distance_tranform</li>
 </ul>
@@ -722,11 +722,11 @@
       <p>Wrapper function that calculates the distance transform on the segmented blood vessels masks. Due to the size of the data it calculated the distance transform using overlapping cubes.</p>
 <h4 id="src.distance_transform.calculate_distance_tranform--parameters">Parameters</h4>
 <p><strong>data_path</strong>: <em>(pathlib.PosixPath)</em> relative path for the segmented masks to be used for the distance transform</p>
-<p><strong>stack_size</strong>: <em>(int)</em> TODO: DESCTIBE PROPERLY</p>
+<p><strong>stack_size</strong>: <em>(int)</em> For the HPC setting we used stack size of 100. For local PC we recommend smaller stack size. <a href="Code use pre-requisites and Installation instructions.md">HERE</a></p>
 <h4 id="src.distance_transform.calculate_distance_tranform--returns">Returns</h4>
 <p><strong>output_directory</strong>: *(pathlib.PosixPath) outputs relative path for the folders with calculated distance transform.</p>
-<p>Results are dumbed on the disk.</p>
-<h4 id="src.distance_transform.calculate_distance_tranform--example-usuage">Example Usuage</h4>
+<p>Results are stored on the disk.</p>
+<h4 id="src.distance_transform.calculate_distance_tranform--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.distance_tranform</span> <span class="kn">import</span> <span class="n">calculate_distance_tranform</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">segmented_vessels_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/results/segmentation/vessel/segment___unet___model_file-model&#39;</span><span class="p">)</span>
 
@@ -751,15 +751,15 @@
 
 <span class="sd">    **data_path**: *(pathlib.PosixPath)* relative path for the segmented masks to be used for the distance transform</span>
 
-<span class="sd">    **stack_size**: *(int)* TODO: DESCTIBE PROPERLY</span>
+<span class="sd">    **stack_size**: *(int)* For the HPC setting we used stack size of 100. For local PC we recommend smaller stack size. [HERE](Code use pre-requisites and Installation instructions.md)</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 <span class="sd">    **output_directory**: *(pathlib.PosixPath) outputs relative path for the folders with calculated distance transform.</span>
 
-<span class="sd">    Results are dumbed on the disk.</span>
+<span class="sd">    Results are stored on the disk.</span>
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 <span class="sd">    ```python</span>
 

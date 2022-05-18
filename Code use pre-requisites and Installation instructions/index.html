@@ -346,6 +346,33 @@
     D) Hardware Setting
   </a>
   
+    <nav class="md-nav" aria-label="D) Hardware Setting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-our-hpc-recources" class="md-nav__link">
+    1) Our HPC recources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-study-parameters" class="md-nav__link">
+    2) Study Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-minimal-recommended-setting-for-local-usage" class="md-nav__link">
+    3) Minimal Recommended setting for local usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -368,8 +395,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../code%20usuage/" class="md-nav__link">
-        Code usuage
+      <a href="../code%20usage/" class="md-nav__link">
+        Code usage
       </a>
     </li>
   
@@ -573,6 +600,33 @@
     D) Hardware Setting
   </a>
   
+    <nav class="md-nav" aria-label="D) Hardware Setting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-our-hpc-recources" class="md-nav__link">
+    1) Our HPC recources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-study-parameters" class="md-nav__link">
+    2) Study Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-minimal-recommended-setting-for-local-usage" class="md-nav__link">
+    3) Minimal Recommended setting for local usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -602,9 +656,9 @@
                 <h3 id="code-use-pre-requisites-and-installation-instructions">Code use pre-requisites and Installation instructions</h3>
 <p>Prior to running the tumor lightsheet image analysis pipeline, the following pre-requisites must be met: </p>
 <ul>
-<li>A) Installation of the python environment named ‘3d’ that contains all the necessary python packages and modules required to run this code.  </li>
-<li>B) Organization of lightsheet data in the recommended folder architecture </li>
-<li>C) Creation of a configuration .json file </li>
+<li>A) Installation of the python <strong><em>environment named 3d</em></strong> that contains all the necessary python packages and modules required to run this code.  </li>
+<li>B) Organization of lightsheet data in the recommended <strong><em>folder architecture</em></strong>. </li>
+<li>C) Creation of a <strong><em>configuration.json file</em></strong>. </li>
 </ul>
 <p>Each of these pre-requisites are described in detail below.  </p>
 <h4 id="a-installation-of-the-required-python-environment">A) Installation of the required python environment:</h4>
@@ -613,7 +667,8 @@
 </ul>
 <h4 id="b-folder-structure">B) Folder Structure</h4>
 <p>Due to the large size of the lightsheet datasets, the code is written to allow output from each step of the analysis pipeline to directly save the results to the hard disk. These 
-results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: </p>
+results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. </p>
+<p>This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: </p>
 <p>3D_Tumor_Lightsheet_Analysis_Pipeline  (can be replaced with your root directory name) 
 * When analyzing one particular study, the following <strong>folders structure</strong> of three channels (vessels, tumors, virus) including the <strong>config.json</strong> file is expected.</p>
 <ul>
@@ -695,7 +750,8 @@ results can then be immediately loaded into memory. The main reason for this app
 </ul>
 <h4 id="d-hardware-setting">D) Hardware Setting</h4>
 <p>The analysis was performed on the high perfomance computing (HPC) environment. Due to the nature of the code (storing all middle steps localy) it may be used on local computer as well.</p>
-<p>HPC hardware we had at disposal had is Cray CS Storm has following recources:</p>
+<h5 id="1-our-hpc-recources">1) Our HPC recources</h5>
+<p>HPC hardware we had at disposal is Cray CS Storm has following recources:</p>
 <p>8 GPU Nodes. Each node in the following configuration:</p>
 <ul>
 <li>8x V100 SXM2 32GB HBM2, NVLink 2</li>
@@ -705,14 +761,18 @@ results can then be immediately loaded into memory. The main reason for this app
 <li>2x S4510, SATA SSD, 2.5”, 240 GB</li>
 <li>4x Mellanox CX-4, x8, VPI Single-Port, QSFP28</li>
 </ul>
-<p>On this setting we were able to analyze one study (containing roufly 1500 Z-planes) in 2 hour.</p>
-<p>We are fully aware that these recources are outside standart local computer. To operate the code on local computers we recommend the following MINIMAL Hardware Requirements:</p>
-<ul>
-<li>CPU with 6 Cores</li>
-<li>16 GB RAM</li>
-<li>800 GB Storage for the Data</li>
-<li>GPU is only required when deep learning model (UNET) is being used.</li>
-</ul>
+<p>On this setting we were able to analyze one study (containing roughly 1500 Z-planes) in 2 hour. (including resizing preprocessing)</p>
+<h5 id="2-study-parameters">2) Study Parameters</h5>
+<p>One Lightsheet study has roufly 1500 z-plane images. Each image having resolution of 5732 x 6078 pixels (35 MB each). 
+Therefore, one study has 3 x 1500 images requiring almost 1TB storage. 
+For the purposes of analysis we resize the images to smaller ones and convert original tiff files to vector arrays.</p>
+<p>To operate the code on local computers we recommend the following MINIMAL Hardware Requirements:</p>
+<h5 id="3-minimal-recommended-setting-for-local-usage">3) Minimal Recommended setting for local usage</h5>
+<p>Based on the input data we recommend following minimal recources:
+* CPU with 8 Cores
+* 16 GB RAM
+* 1TB (hard disk) Storage for the Data (for raw data storage)
+* GPU is only required when deep learning model (UNET) is being used.</p>
                 
               
               
@@ -748,13 +808,13 @@ results can then be immediately loaded into memory. The main reason for this app
       
       
         
-        <a href="../code%20usuage/" class="md-footer__link md-footer__link--next" aria-label="Next: Code usuage" rel="next">
+        <a href="../code%20usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Code usage" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Code usuage
+              Code usage
             </div>
           </div>
           <div class="md-footer__button md-icon">

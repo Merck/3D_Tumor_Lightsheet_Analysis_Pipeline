@@ -294,8 +294,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code%20usuage/" class="md-nav__link">
-        Code usuage
+      <a href="../../code%20usage/" class="md-nav__link">
+        Code usage
       </a>
     </li>
   
@@ -531,8 +531,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.profiles.calculate_profile--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.profiles.calculate_profile--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -565,8 +565,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.profiles.vizualize_profile--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.profiles.vizualize_profile--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -687,8 +687,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.profiles.calculate_profile--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.profiles.calculate_profile--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -721,8 +721,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.profiles.vizualize_profile--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.profiles.vizualize_profile--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -797,8 +797,8 @@ It requires <em>Virus</em> channel, <em>Distance Transform of blood vessels</em>
 <p><strong>pixel_to_microns</strong> <em>(float)</em> Ration between pixels and microns. (When Images multiplied by 4)</p>
 <p><strong>force_overwrite</strong> <em>(bool)</em> if true profiles will be recalculated from scratch even if it has been calculated before.</p>
 <h4 id="src.profiles.calculate_profile--returns">Returns</h4>
-<p><strong>Dict</strong>: *(dict) dictionary containign the results in a nested form. One Key are profiles calcualted for entire tumor, another are calcualted only for core etc .</p>
-<h4 id="src.profiles.calculate_profile--example-usuage">Example Usuage</h4>
+<p><strong>Dict</strong>: *(dict) dictionary containing the results in a nested form. One Key are profiles calculated for entire tumor, another are calculated only for core etc .</p>
+<h4 id="src.profiles.calculate_profile--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.profiles</span> <span class="kn">import</span> <span class="n">calculate_profile</span>
 
 
@@ -859,9 +859,9 @@ It requires <em>Virus</em> channel, <em>Distance Transform of blood vessels</em>
 
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
-<span class="sd">    **Dict**: *(dict) dictionary containign the results in a nested form. One Key are profiles calcualted for entire tumor, another are calcualted only for core etc .</span>
+<span class="sd">    **Dict**: *(dict) dictionary containing the results in a nested form. One Key are profiles calculated for entire tumor, another are calculated only for core etc .</span>
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 
 <span class="sd">    ```python</span>
@@ -964,10 +964,10 @@ It requires <em>Virus</em> channel, <em>Distance Transform of blood vessels</em>
 <p><strong>data_frame</strong>: <em>(pd.DataFrame)</em> Dataframe with aggregated profiles to use for the plot</p>
 <p><strong>distance_threshold_microns</strong>: <em>(int)</em> Maximum distance (microns) on the x-axis.</p>
 <p><strong>ylim_bottom</strong>: <em>(float)</em>  Minumum values to use in the y-axis.</p>
-<p><strong>plot</strong> <em>(bool)</em> Wheater the profile shuld be plotted or not (usefull when plotting multiple profiles in one cell. Otherwise can be ignored)</p>
+<p><strong>plot</strong> <em>(bool)</em> Whether the profile should be plotted or not (usefull when plotting multiple profiles in one cell. Otherwise can be ignored)</p>
 <h4 id="src.profiles.vizualize_profile--returns">Returns</h4>
 <p>None</p>
-<h4 id="src.profiles.vizualize_profile--example-usuage">Example Usuage</h4>
+<h4 id="src.profiles.vizualize_profile--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.profiles</span> <span class="kn">import</span> <span class="n">vizualize_profile</span>
 
 <span class="o">&gt;&gt;&gt;</span><span class="n">profile_all</span> <span class="o">=</span> <span class="n">vizualize_profile</span><span class="p">(</span><span class="n">profiles</span><span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">])</span>
@@ -996,13 +996,13 @@ It requires <em>Virus</em> channel, <em>Distance Transform of blood vessels</em>
 
 <span class="sd">     **ylim_bottom**: *(float)*  Minumum values to use in the y-axis.</span>
 
-<span class="sd">     **plot** *(bool)* Wheater the profile shuld be plotted or not (usefull when plotting multiple profiles in one cell. Otherwise can be ignored)</span>
+<span class="sd">     **plot** *(bool)* Whether the profile should be plotted or not (usefull when plotting multiple profiles in one cell. Otherwise can be ignored)</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 <span class="sd">    None</span>
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 
 <span class="sd">    ```python</span>

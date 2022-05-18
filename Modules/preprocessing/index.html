@@ -294,8 +294,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code%20usuage/" class="md-nav__link">
-        Code usuage
+      <a href="../../code%20usage/" class="md-nav__link">
+        Code usage
       </a>
     </li>
   
@@ -475,8 +475,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.preprocessing.convert_images_to_numpy_format--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.preprocessing.convert_images_to_numpy_format--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -509,8 +509,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.preprocessing.data_preprocessing_wrapper--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.preprocessing.data_preprocessing_wrapper--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -687,8 +687,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.preprocessing.convert_images_to_numpy_format--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.preprocessing.convert_images_to_numpy_format--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -721,8 +721,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.preprocessing.data_preprocessing_wrapper--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.preprocessing.data_preprocessing_wrapper--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -792,8 +792,8 @@
 <h4 id="src.preprocessing.convert_images_to_numpy_format--parameters">Parameters</h4>
 <p><strong>input_directory</strong>: <em>(pathlib.PosixPath object)</em> relative path to the images which should be preprocessed</p>
 <h4 id="src.preprocessing.convert_images_to_numpy_format--returns">Returns</h4>
-<p><strong>output_directory</strong>: <em>(pathlib.PosixPath object)</em> one relative paths for the folder with preprocessed results (tranfered and converted images)</p>
-<h4 id="src.preprocessing.convert_images_to_numpy_format--example-usuage">Example Usuage</h4>
+<p><strong>output_directory</strong>: <em>(pathlib.PosixPath object)</em> relative path for the folder with preprocessed results (tranferred and converted images)</p>
+<h4 id="src.preprocessing.convert_images_to_numpy_format--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.preprocessing</span> <span class="kn">import</span> <span class="n">convert_images_to_numpy_format</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">tumor_folder</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/raw/tumor&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">convert_images_to_numpy_format</span><span class="p">(</span><span class="n">tumor_folder</span><span class="p">)</span>
@@ -821,10 +821,10 @@
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 
-<span class="sd">    **output_directory**: *(pathlib.PosixPath object)* one relative paths for the folder with preprocessed results (tranfered and converted images)</span>
+<span class="sd">    **output_directory**: *(pathlib.PosixPath object)* relative path for the folder with preprocessed results (tranferred and converted images)</span>
 
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 <span class="sd">    ```python</span>
 <span class="sd">    &gt;&gt;&gt;from src.preprocessing import convert_images_to_numpy_format</span>
@@ -883,14 +883,14 @@
     <div class="doc doc-contents ">
 
       <p>High level function that covers preprocessing for all data (blood vessels, tumors, virus).
-It used the convert_images_to_numpy_format function and applies it three times for each channel.
+It used the convert_images_to_numpy_format function and applies to each channel (blood vessels, tumors, virus).
 If you want to preprocess just one channel (e.g. only tumors) use the convert_images_to_numpy_format function.</p>
 <h4 id="src.preprocessing.data_preprocessing_wrapper--parameters">Parameters</h4>
 <p><strong>data</strong>: <em>(dict)</em> containing keys (names of the channels) and values (relative paths to it).</p>
 <h4 id="src.preprocessing.data_preprocessing_wrapper--returns">Returns</h4>
-<p><strong>preprocessed_data</strong>: *(dict) outputs three relative paths for the folders with preprocessed results (tranfered and converted images)</p>
-<p>Results are dumbed on the disk.</p>
-<h4 id="src.preprocessing.data_preprocessing_wrapper--example-usuage">Example Usuage</h4>
+<p><strong>preprocessed_data</strong>: *(dict) outputs three relative paths for the folders with preprocessed results (tranferred and converted images)</p>
+<p>Results are stored on the disk.</p>
+<h4 id="src.preprocessing.data_preprocessing_wrapper--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.preprocessing</span> <span class="kn">import</span> <span class="n">data_preprocessing_wrapper</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">study_paths</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;vessel&#39;</span><span class="p">:</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/raw/vessel&#39;</span><span class="p">),</span>
  <span class="s1">&#39;tumor&#39;</span><span class="p">:</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/raw/tumor&#39;</span><span class="p">),</span>
@@ -912,7 +912,7 @@ If you want to preprocess just one channel (e.g. only tumors) use the convert_im
 
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    High level function that covers preprocessing for all data (blood vessels, tumors, virus).</span>
-<span class="sd">    It used the convert_images_to_numpy_format function and applies it three times for each channel.</span>
+<span class="sd">    It used the convert_images_to_numpy_format function and applies to each channel (blood vessels, tumors, virus).</span>
 <span class="sd">    If you want to preprocess just one channel (e.g. only tumors) use the convert_images_to_numpy_format function.</span>
 
 
@@ -923,11 +923,11 @@ If you want to preprocess just one channel (e.g. only tumors) use the convert_im
 
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
-<span class="sd">    **preprocessed_data**: *(dict) outputs three relative paths for the folders with preprocessed results (tranfered and converted images)</span>
+<span class="sd">    **preprocessed_data**: *(dict) outputs three relative paths for the folders with preprocessed results (tranferred and converted images)</span>
 
-<span class="sd">    Results are dumbed on the disk.</span>
+<span class="sd">    Results are stored on the disk.</span>
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 <span class="sd">    ```python</span>
 

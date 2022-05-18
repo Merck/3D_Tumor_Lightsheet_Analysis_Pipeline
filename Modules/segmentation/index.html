@@ -294,8 +294,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code%20usuage/" class="md-nav__link">
-        Code usuage
+      <a href="../../code%20usage/" class="md-nav__link">
+        Code usage
       </a>
     </li>
   
@@ -437,11 +437,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.segmentation--module-for-blood-vessels-and-tumor-segmentation" class="md-nav__link">
-    module for blood vessels and tumor segmentation
+  <a href="#src.segmentation--module-for-blood-vessels-and-tumor-boundary-segmentation" class="md-nav__link">
+    module for blood vessels and tumor boundary segmentation
   </a>
   
-    <nav class="md-nav" aria-label="module for blood vessels and tumor segmentation">
+    <nav class="md-nav" aria-label="module for blood vessels and tumor boundary segmentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -489,8 +489,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation.random_forest--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation.random_forest--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -523,8 +523,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation.segmentation_wrapper--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation.segmentation_wrapper--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -557,8 +557,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation.thresholding--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation.thresholding--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -591,8 +591,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation.unet--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation.unet--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -703,11 +703,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.segmentation--module-for-blood-vessels-and-tumor-segmentation" class="md-nav__link">
-    module for blood vessels and tumor segmentation
+  <a href="#src.segmentation--module-for-blood-vessels-and-tumor-boundary-segmentation" class="md-nav__link">
+    module for blood vessels and tumor boundary segmentation
   </a>
   
-    <nav class="md-nav" aria-label="module for blood vessels and tumor segmentation">
+    <nav class="md-nav" aria-label="module for blood vessels and tumor boundary segmentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -755,8 +755,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation.random_forest--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation.random_forest--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -789,8 +789,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation.segmentation_wrapper--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation.segmentation_wrapper--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -823,8 +823,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation.thresholding--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation.thresholding--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -857,8 +857,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation.unet--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation.unet--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -886,9 +886,7 @@
                 
                 
                 <h1 id="segmentation">Segmentation</h1>
-<p>Some segmentation models (random_forest and unet) require a pre-trained model as a function argument. All pre-trained model can be found within the <em>3DHistology</em> folder on the HPC server at this link:</p>
-<div class="highlight"><pre><span></span><code>/SFS/project/ry/3DHistology/pretrained_models.
-</code></pre></div>
+<p>Some segmentation models (random_forest and unet) require a pre-trained model as a function argument.</p>
 
 
   <div class="doc doc-object doc-module">
@@ -897,7 +895,7 @@
     <div class="doc doc-contents first">
 
       <h3 id="src.segmentation--segmentation-module">segmentation module:</h3>
-<h4 id="src.segmentation--module-for-blood-vessels-and-tumor-segmentation">module for blood vessels and tumor segmentation</h4>
+<h4 id="src.segmentation--module-for-blood-vessels-and-tumor-boundary-segmentation">module for blood vessels and tumor boundary segmentation</h4>
 <h5 id="src.segmentation--this-module-consists-of-four-main-functions">This module consists of four main functions:</h5>
 <ul>
 <li>random_forest</li>
@@ -941,8 +939,8 @@ relative path to a folder where the results should be saved</p>
 <p><strong>model_file</strong>: <em>(pathlib.PosixPath object)</em>
 relative path to the pre-trained model binary file, which should be used for the segmentation</p>
 <h4 id="src.segmentation.random_forest--returns">Returns</h4>
-<p>None: Results are dumbed on the disk.</p>
-<h4 id="src.segmentation.random_forest--example-usuage">Example Usuage</h4>
+<p>None: Results are stored on the disk.</p>
+<h4 id="src.segmentation.random_forest--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">random_forest</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">random_forest</span><span class="p">(</span>
     <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;</span><span class="p">),</span>
@@ -983,10 +981,10 @@ relative path to the pre-trained model binary file, which should be used for the
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 
-<span class="sd">    None: Results are dumbed on the disk.</span>
+<span class="sd">    None: Results are stored on the disk.</span>
 
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 <span class="sd">    ```python</span>
 
@@ -1053,10 +1051,10 @@ method to use for segmentation (unet, thresholding, random_forest)</p>
 <p><strong>method_parameters</strong>: <em>(Dict)</em>
 relative path to the pre-trained model binary file, which should be used for the segmentation</p>
 <p><strong>device</strong>: <em>(str)</em>
-graphic card which should be used. Code automatically selects graphic card, that is free.</p>
+graphic card which should be used (relevant only to cloud computing environment). For local code the graphic card is selected automatically based on the PC hardware.</p>
 <h4 id="src.segmentation.segmentation_wrapper--returns">Returns</h4>
-<p>None: Results are dumbed on the disk.</p>
-<h4 id="src.segmentation.segmentation_wrapper--example-usuage">Example Usuage</h4>
+<p>None: Results are stored on the disk.</p>
+<h4 id="src.segmentation.segmentation_wrapper--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">unet</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">unet</span><span class="p">(</span>
     <span class="n">input_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;</span><span class="p">),</span>
@@ -1093,15 +1091,15 @@ graphic card which should be used. Code automatically selects graphic card, that
 <span class="sd">    relative path to the pre-trained model binary file, which should be used for the segmentation</span>
 
 <span class="sd">    **device**: *(str)*</span>
-<span class="sd">    graphic card which should be used. Code automatically selects graphic card, that is free.</span>
+<span class="sd">    graphic card which should be used (relevant only to cloud computing environment). For local code the graphic card is selected automatically based on the PC hardware.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 
-<span class="sd">    None: Results are dumbed on the disk.</span>
+<span class="sd">    None: Results are stored on the disk.</span>
 
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 
 <span class="sd">    ```python</span>
@@ -1171,8 +1169,8 @@ Supported methods are "th_otsu", "th_triangle", "th_yen".</p>
 <p><strong>mask_path</strong>: <em>(pathlib.PosixPath object)</em>
 relative path for the binary mask to be used to filter the area of interest on which the segmentation will be performed.</p>
 <h4 id="src.segmentation.thresholding--returns">Returns</h4>
-<p>None: Results are dumbed on the disk.</p>
-<h4 id="src.segmentation.thresholding--example-usuage">Example Usuage</h4>
+<p>None: Results are stored on the disk.</p>
+<h4 id="src.segmentation.thresholding--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">thresholding</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">thresholding</span><span class="p">(</span>
     <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;</span><span class="p">),</span>
@@ -1221,10 +1219,10 @@ relative path for the binary mask to be used to filter the area of interest on w
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 
-<span class="sd">    None: Results are dumbed on the disk.</span>
+<span class="sd">    None: Results are stored on the disk.</span>
 
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 <span class="sd">    ```python</span>
 
@@ -1281,10 +1279,10 @@ relative path to a folder where the results should be saved</p>
 <p><strong>model_file</strong>: <em>(pathlib.PosixPath object)</em>
 relative path to the pre-trained model binary file, which should be used for the segmentation</p>
 <p><strong>device</strong>: <em>(str)</em>
-graphic card which should be used. Code automatically selects graphic card, that is free.</p>
+graphic card which should be used (relevant only to cloud computing environment). For local code the graphic card is selected automatically based on the PC hardware.</p>
 <h4 id="src.segmentation.unet--returns">Returns</h4>
-<p>None: Results are dumbed on the disk.</p>
-<h4 id="src.segmentation.unet--example-usuage">Example Usuage</h4>
+<p>None: Results are stored on the disk.</p>
+<h4 id="src.segmentation.unet--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">unet</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">unet</span><span class="p">(</span>
     <span class="n">input_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;msd_projects/ppdm/data/5IT_DUMMY_STUDY/source/transformed/np_and_resized/vessel&#39;</span><span class="p">),</span>
@@ -1322,15 +1320,15 @@ graphic card which should be used. Code automatically selects graphic card, that
 <span class="sd">    relative path to the pre-trained model binary file, which should be used for the segmentation</span>
 
 <span class="sd">    **device**: *(str)*</span>
-<span class="sd">    graphic card which should be used. Code automatically selects graphic card, that is free.</span>
+<span class="sd">    graphic card which should be used (relevant only to cloud computing environment). For local code the graphic card is selected automatically based on the PC hardware.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 
-<span class="sd">    None: Results are dumbed on the disk.</span>
+<span class="sd">    None: Results are stored on the disk.</span>
 
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 
 <span class="sd">    ```python</span>

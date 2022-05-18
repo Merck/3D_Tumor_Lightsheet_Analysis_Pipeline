@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/code%20usuage/">
+        <link rel="canonical" href="https://merck.github.io/3D_Tumor_Lightsheet_Analysis_Pipeline/code%20usage/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>Code usuage - 3D Tumor Lightsheet Analysis Pipeline</title>
+        <title>Code usage - 3D Tumor Lightsheet Analysis Pipeline</title>
       
     
     
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Code usuage
+              Code usage
             
           </span>
         </div>
@@ -304,12 +304,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Code usuage
+          Code usage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Code usuage
+        Code usage
       </a>
       
         
@@ -634,12 +634,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Merck/3D_Tumor_Lightsheet_Analysis_Pipeline/edit/master/docs/code usuage.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Merck/3D_Tumor_Lightsheet_Analysis_Pipeline/edit/master/docs/code usage.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Code usuage</h1>
+                  <h1>Code usage</h1>
                 
                 <h4 id="code-usage">Code Usage</h4>
 <p>The code can be operated in 2 separated ways:</p>
@@ -648,12 +648,13 @@
 <li>2) Manual Usage of Modules</li>
 </ul>
 <p><strong> 1)Fully automated pipeline</strong></p>
-<p>which analyzes entire study automaticaly and logs the results (final profiles) into mlflow. (All middle steps e.g. segmented masks are stored on the hard disk).</p>
+<p>which analyzes the entire study automaticaly and logs the results (final biologic penetration profiles) into mlflow. 
+(All steps e.g. segmented masks are stored on the hard disk).</p>
 <p>This approach requires the usage of <strong>config.json</strong> file, which contains details regarding the pipeline settings <a href="../config/">(see config page)</a>.</p>
-<p>Once the <strong>config.json</strong> is prepared, the code can be used via 2 files:</p>
+<p>Once the <strong>config.json</strong> is prepared, the code can be used via either of the two files bellow:</p>
 <ul>
-<li>main.py</li>
-<li>master_script.py</li>
+<li><strong>main.py</strong> (Command line version)</li>
+<li><strong>master_script.py</strong> (Script version which may be operated from jupyter lab or any other python IDE)</li>
 </ul>
 <h3 id="mainpy">main.py</h3>
 <p>this file used for the CommandLine (terminal) interface. This file shall be used when the entire analysis should be performed automaticaly and one in intested only in inspecting the results in <em>mlflow</em>.</p>
@@ -879,10 +880,10 @@ See <a href="../config/">Config file documentation</a></p>
 <h3 id="master_scriptpy">master_script.py</h3>
 <p>This file is a script version of <code>main.py</code> file. This means that it allows for interactive (cell-by-cell) usage.</p>
 <p><strong> 2)Manual Usage of Modules</strong></p>
-<p>As the entire code is written as a package, one can acces individual modules (functions) and use them wholly separatelly for own purposes e.g. only for blood vessels segmentations/distance transform. This approach does not require the <strong>config.json</strong> file.</p>
+<p>One can choose to run modules individually - e.g. only for blood vessels segmentations/distance transform. This allows for the further customization of the code. This approach does not require the <strong>config.json</strong> file.</p>
 <p>See the <strong>Documentation of individual modules</strong> for further details: <a href="../Modules/preprocessing/">Preprocessing,</a> <a href="../Modules/segmentation/">Segmentation,</a> <a href="../Modules/segmentation_postprocessing/">Postprocessing,</a> <a href="../Modules/distance_transform/">Distance Transform,</a> <a href="../Modules/profiles/">Profiles.</a></p>
-<p>Even when using Modules individualy, the function's documentation can still be accesed within the jupyterlab. When using <strong>Contextual Helper</strong> we see the functions documentation (see below).</p>
-<p><img alt="" src="/images/docs.png" /></p>
+<p>Even when using Modules individually, the function's documentation can still be accesed within the jupyterlab. When using <strong>Contextual Helper</strong> we see the functions documentation (see below).</p>
+<p><img alt="" src="../images/docs.png" /></p>
                 
               
               

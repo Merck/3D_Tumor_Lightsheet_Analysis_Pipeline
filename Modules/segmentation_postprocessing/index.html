@@ -294,8 +294,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../code%20usuage/" class="md-nav__link">
-        Code usuage
+      <a href="../../code%20usage/" class="md-nav__link">
+        Code usage
       </a>
     </li>
   
@@ -462,23 +462,30 @@
     Implemented Operations: Reducing Tumor Borders and Filling holes
   </a>
   
-    <nav class="md-nav" aria-label="Implemented Operations: Reducing Tumor Borders and Filling holes">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation_postprocessing--todo-is-it-discussed-in-the-paper" class="md-nav__link">
+    TODO: is it discussed in the paper?
+  </a>
+  
+    <nav class="md-nav" aria-label="TODO: is it discussed in the paper?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.segmentation_postprocessing--this-module-consists-of-four-main-functions" class="md-nav__link">
-    This module consists of four main functions:
+  <a href="#src.segmentation_postprocessing--this-module-consists-of-two-main-functions" class="md-nav__link">
+    This module consists of two main functions:
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -510,8 +517,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation_postprocessing.postprocess_masks--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation_postprocessing.postprocess_masks--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -544,8 +551,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation_postprocessing.split_tumor_into_core_and_periphery--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation_postprocessing.split_tumor_into_core_and_periphery--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -653,23 +660,30 @@
     Implemented Operations: Reducing Tumor Borders and Filling holes
   </a>
   
-    <nav class="md-nav" aria-label="Implemented Operations: Reducing Tumor Borders and Filling holes">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#src.segmentation_postprocessing--todo-is-it-discussed-in-the-paper" class="md-nav__link">
+    TODO: is it discussed in the paper?
+  </a>
+  
+    <nav class="md-nav" aria-label="TODO: is it discussed in the paper?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#src.segmentation_postprocessing--this-module-consists-of-four-main-functions" class="md-nav__link">
-    This module consists of four main functions:
+  <a href="#src.segmentation_postprocessing--this-module-consists-of-two-main-functions" class="md-nav__link">
+    This module consists of two main functions:
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -701,8 +715,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation_postprocessing.postprocess_masks--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation_postprocessing.postprocess_masks--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -735,8 +749,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#src.segmentation_postprocessing.split_tumor_into_core_and_periphery--example-usuage" class="md-nav__link">
-    Example Usuage
+  <a href="#src.segmentation_postprocessing.split_tumor_into_core_and_periphery--example-usage" class="md-nav__link">
+    Example Usage
   </a>
   
 </li>
@@ -774,7 +788,8 @@
       <h3 id="src.segmentation_postprocessing--segmentation-postprocessing-module">segmentation postprocessing module:</h3>
 <h4 id="src.segmentation_postprocessing--module-for-certain-masks-postprocessing-operation">module for certain masks postprocessing operation</h4>
 <h4 id="src.segmentation_postprocessing--implemented-operations-reducing-tumor-borders-and-filling-holes">Implemented Operations: Reducing Tumor Borders and Filling holes</h4>
-<h5 id="src.segmentation_postprocessing--this-module-consists-of-four-main-functions">This module consists of four main functions:</h5>
+<h2 id="src.segmentation_postprocessing--todo-is-it-discussed-in-the-paper">TODO: is it discussed in the paper?</h2>
+<h5 id="src.segmentation_postprocessing--this-module-consists-of-two-main-functions">This module consists of two main functions:</h5>
 <ul>
 <li>postprocess_masks</li>
 <li>split_tumor_into_core_and_periphery</li>
@@ -807,16 +822,16 @@
 For now only used for the tumor masks postprocessing to split masks into core and periphery regions.</p>
 <h4 id="src.segmentation_postprocessing.postprocess_masks--parameters">Parameters</h4>
 <p><strong>data_path</strong> : <em>(pathlib.PosixPath)</em> relative path to the segmented masks.</p>
-<p><strong>method</strong>: <em>(str)</em> function which should be apply in order to postprocess masks. Thus far we only use 'split_tumor_into_core_and_periphery' function.</p>
+<p><strong>method</strong>: <em>(str)</em> function which should be applied in order to postprocess masks. Thus far we only use 'split_tumor_into_core_and_periphery' function.</p>
 <p><strong>method_parameters</strong>: <em>(Dict)</em> parameters to use for the function applied in <strong>method</strong> argument.</p>
 <h4 id="src.segmentation_postprocessing.postprocess_masks--returns">Returns</h4>
-<p>output_directory <em>(pathlib.PosixPath)</em>: Path where the results have been dumped on the disk to.</p>
-<h4 id="src.segmentation_postprocessing.postprocess_masks--example-usuage">Example Usuage</h4>
+<p>output_directory <em>(pathlib.PosixPath)</em>: Path where the results have been stored on the disk to.</p>
+<h4 id="src.segmentation_postprocessing.postprocess_masks--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">postprocess_masks</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">postprocess_masks</span><span class="p">(</span>
     <span class="n">input_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/results/segmentation/tumor/segment___thresholding___method-th_triangle&#39;</span><span class="p">),</span>
     <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;split_tumor_into_core_and_periphery&#39;</span><span class="p">,</span>
-    <span class="n">method_parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;periphery_as_ratio_of_max_distance&#39;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">}</span>
+    <span class="n">method_parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;periphery_as_ratio_of_max_distance&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">}</span>
 </code></pre></div>
 
         <details class="quote">
@@ -833,7 +848,7 @@ For now only used for the tumor masks postprocessing to split masks into core an
 <span class="sd">    ----------</span>
 <span class="sd">    **data_path** : *(pathlib.PosixPath)* relative path to the segmented masks.</span>
 
-<span class="sd">    **method**: *(str)* function which should be apply in order to postprocess masks. Thus far we only use &#39;split_tumor_into_core_and_periphery&#39; function.</span>
+<span class="sd">    **method**: *(str)* function which should be applied in order to postprocess masks. Thus far we only use &#39;split_tumor_into_core_and_periphery&#39; function.</span>
 
 <span class="sd">    **method_parameters**: *(Dict)* parameters to use for the function applied in **method** argument.</span>
 
@@ -841,10 +856,10 @@ For now only used for the tumor masks postprocessing to split masks into core an
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 
-<span class="sd">    output_directory *(pathlib.PosixPath)*: Path where the results have been dumped on the disk to.</span>
+<span class="sd">    output_directory *(pathlib.PosixPath)*: Path where the results have been stored on the disk to.</span>
 
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 
 <span class="sd">    ```python</span>
@@ -853,7 +868,7 @@ For now only used for the tumor masks postprocessing to split masks into core an
 <span class="sd">    &gt;&gt;&gt;postprocess_masks(</span>
 <span class="sd">        input_directory = Path(&#39;ppdm/data/5IT_DUMMY_STUDY/results/segmentation/tumor/segment___thresholding___method-th_triangle&#39;),</span>
 <span class="sd">        method = &#39;split_tumor_into_core_and_periphery&#39;,</span>
-<span class="sd">        method_parameters = {&#39;periphery_as_ratio_of_max_distance&#39;: 0.6}</span>
+<span class="sd">        method_parameters = {&#39;periphery_as_ratio_of_max_distance&#39;: 0.2}</span>
 <span class="sd">    ```</span>
 
 
@@ -913,8 +928,8 @@ For now only used for the tumor masks postprocessing to split masks into core an
 <p><strong>output_directory</strong> : <em>(pathlib.PosixPath)</em> relative path where the results should be saved to.</p>
 <p><strong>periphery_as_ratio_of_max_distance</strong>: <em>(float)</em> what ratio of the tumor should be consired core. Any number in &lt;0;1&gt;</p>
 <h4 id="src.segmentation_postprocessing.split_tumor_into_core_and_periphery--returns">Returns</h4>
-<p>None: Results are dumped on the disk.</p>
-<h4 id="src.segmentation_postprocessing.split_tumor_into_core_and_periphery--example-usuage">Example Usuage</h4>
+<p>None: Results are stored on the disk.</p>
+<h4 id="src.segmentation_postprocessing.split_tumor_into_core_and_periphery--example-usage">Example Usage</h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span><span class="kn">from</span> <span class="nn">src.segmentation</span> <span class="kn">import</span> <span class="n">split_tumor_into_core_and_periphery</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">split_tumor_into_core_and_periphery</span><span class="p">(</span>
     <span class="n">input_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;ppdm/data/5IT_DUMMY_STUDY/results/segmentation/tumor/segment___thresholding___method-th_triangle&#39;</span><span class="p">),</span>
@@ -944,10 +959,10 @@ For now only used for the tumor masks postprocessing to split masks into core an
 <span class="sd">    Returns</span>
 <span class="sd">    ------</span>
 
-<span class="sd">    None: Results are dumped on the disk.</span>
+<span class="sd">    None: Results are stored on the disk.</span>
 
 
-<span class="sd">    Example Usuage</span>
+<span class="sd">    Example Usage</span>
 <span class="sd">    --------------</span>
 
 <span class="sd">    ```python</span>
