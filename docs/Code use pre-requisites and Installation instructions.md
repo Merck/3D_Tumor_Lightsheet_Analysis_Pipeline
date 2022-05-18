@@ -2,9 +2,9 @@
 
 Prior to running the tumor lightsheet image analysis pipeline, the following pre-requisites must be met: 
 
-* A) Installation of the python environment named ‘3d’ that contains all the necessary python packages and modules required to run this code.  
-* B) Organization of lightsheet data in the recommended folder architecture 
-* C) Creation of a configuration .json file 
+* A) Installation of the python ***environment named 3d*** that contains all the necessary python packages and modules required to run this code.  
+* B) Organization of lightsheet data in the recommended ***folder architecture***. 
+* C) Creation of a ***configuration.json file***. 
 
 
 Each of these pre-requisites are described in detail below.  
@@ -16,7 +16,9 @@ Each of these pre-requisites are described in detail below.
 #### B) Folder Structure
 
 Due to the large size of the lightsheet datasets, the code is written to allow output from each step of the analysis pipeline to directly save the results to the hard disk. These 
-results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: 
+results can then be immediately loaded into memory. The main reason for this approach is the ability to perform the analysis on a local, moderately powerful computer. 
+
+This overcomes the limitations imposed by limited RAM memory. As a consequence, it is necessary to use a fixed folder structure for the raw data and configuration file provided as an input. The recommended folder structure is illustrated with an example below: 
 
 3D_Tumor_Lightsheet_Analysis_Pipeline  (can be replaced with your root directory name) 
 * When analyzing one particular study, the following **folders structure** of three channels (vessels, tumors, virus) including the **config.json** file is expected.
@@ -86,7 +88,9 @@ results can then be immediately loaded into memory. The main reason for this app
 
 The analysis was performed on the high perfomance computing (HPC) environment. Due to the nature of the code (storing all middle steps localy) it may be used on local computer as well.
 
-HPC hardware we had at disposal had is Cray CS Storm has following recources:
+##### 1) Our HPC recources
+
+HPC hardware we had at disposal is Cray CS Storm has following recources:
 
 8 GPU Nodes. Each node in the following configuration:
 
@@ -97,12 +101,20 @@ HPC hardware we had at disposal had is Cray CS Storm has following recources:
 * 2x S4510, SATA SSD, 2.5”, 240 GB
 * 4x Mellanox CX-4, x8, VPI Single-Port, QSFP28
 
+On this setting we were able to analyze one study (containing roughly 1500 Z-planes) in 2 hour. (including resizing preprocessing)
 
-On this setting we were able to analyze one study (containing roufly 1500 Z-planes) in 2 hour.
+##### 2) Study Parameters
 
-We are fully aware that these recources are outside standart local computer. To operate the code on local computers we recommend the following MINIMAL Hardware Requirements:
+One Lightsheet study has roufly 1500 z-plane images. Each image having resolution of 5732 x 6078 pixels (35 MB each). 
+Therefore, one study has 3 x 1500 images requiring almost 1TB storage. 
+For the purposes of analysis we resize the images to smaller ones and convert original tiff files to vector arrays.
 
-* CPU with 6 Cores
+To operate the code on local computers we recommend the following MINIMAL Hardware Requirements:
+
+##### 3) Minimal Recommended setting for local usage
+
+Based on the input data we recommend following minimal recources:
+* CPU with 8 Cores
 * 16 GB RAM
-* 800 GB Storage for the Data
+* 1TB (hard disk) Storage for the Data (for raw data storage)
 * GPU is only required when deep learning model (UNET) is being used.

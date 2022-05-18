@@ -10,7 +10,7 @@ All Changeble parameters are listed bellow:
 | **segmentation_method_vessel[^1]** | **random_forest[^2]** | **model_file**: relative path              |   |   |
 |                               | **unet[^2]**          | **model_file**: relative path              |   |   |
 |                               | **thresholding[^2]**  | **method**: [th_triangle,th_yen,th_otsu]   |   |   |
-| **segmentation_postprocessing_tumor** | **split_tumor_into_core_and_periphery** | **periphery_as_ratio_of_max_distance**:<0; 1>               |   |   |
+| **segmentation_postprocessing_tumor** | **split_tumor_into_core_and_periphery[^3]** | **periphery_as_ratio_of_max_distance**:<0; 1>               |   |   |
 | **distance_tranform** |  | **stack_size**: int              |   |   |
 | **pixels_to_microns** | float  |               |   |   |
 | **mlflow_logging** | bool  |               |   |   |
@@ -18,7 +18,7 @@ All Changeble parameters are listed bellow:
 
 [^1]: [see pipeline overview](methodology_overview.md)
 [^2]: [see segmentation module documentation and examples](Modules/segmentation.md)
-
+[^3]: Describes the fraction of tumor core and periphery (should add up to 1) - e.g. we assumed 0.2 (20 percent) periphery and 0.8 (80 percent) tumor core.
 
 # 
 

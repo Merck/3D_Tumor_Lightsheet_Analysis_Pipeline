@@ -32,7 +32,7 @@ def data_preprocessing_wrapper(data: dict) -> dict:
 
     """
     High level function that covers preprocessing for all data (blood vessels, tumors, virus).
-    It used the convert_images_to_numpy_format function and applies it three times for each channel.
+    It used the convert_images_to_numpy_format function and applies to each channel (blood vessels, tumors, virus).
     If you want to preprocess just one channel (e.g. only tumors) use the convert_images_to_numpy_format function.
 
 
@@ -43,11 +43,11 @@ def data_preprocessing_wrapper(data: dict) -> dict:
 
     Returns
     ------
-    **preprocessed_data**: *(dict) outputs three relative paths for the folders with preprocessed results (tranfered and converted images)
+    **preprocessed_data**: *(dict) outputs three relative paths for the folders with preprocessed results (tranferred and converted images)
 
-    Results are dumbed on the disk.
+    Results are stored on the disk.
 
-    Example Usuage
+    Example Usage
     --------------
     ```python
 
@@ -98,6 +98,7 @@ def _create_numpy_formats_of_input_img(img_path, output_directory) -> None:
     img_i = imread(img_path)
     img_dtype = img_i.dtype
     img_i = rescale(
+        #TODO: WHY THIS RATIO and ADDto PAPERand DOCS
         # 1.8/4 because 4 microns in z-layers are give by microscope, and 1.8 in x and y-axis are also given.
         # Values here are hard-coded if they change microscope, we may need to change the values here
         img_i,
@@ -126,10 +127,10 @@ def convert_images_to_numpy_format(
     Returns
     ------
 
-    **output_directory**: *(pathlib.PosixPath object)* one relative paths for the folder with preprocessed results (tranfered and converted images)
+    **output_directory**: *(pathlib.PosixPath object)* relative path for the folder with preprocessed results (tranferred and converted images)
 
 
-    Example Usuage
+    Example Usage
     --------------
     ```python
     >>>from src.preprocessing import convert_images_to_numpy_format

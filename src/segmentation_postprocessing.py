@@ -2,7 +2,8 @@
 ## segmentation postprocessing module:
 ### module for certain masks postprocessing operation
 ### Implemented Operations: Reducing Tumor Borders and Filling holes
-#### This module consists of four main functions:
+#TODO: is it discussed in the paper?
+#### This module consists of two main functions:
 
 * postprocess_masks
 * split_tumor_into_core_and_periphery
@@ -49,7 +50,7 @@ def postprocess_masks(
     ----------
     **data_path** : *(pathlib.PosixPath)* relative path to the segmented masks.
 
-    **method**: *(str)* function which should be apply in order to postprocess masks. Thus far we only use 'split_tumor_into_core_and_periphery' function.
+    **method**: *(str)* function which should be applied in order to postprocess masks. Thus far we only use 'split_tumor_into_core_and_periphery' function.
 
     **method_parameters**: *(Dict)* parameters to use for the function applied in **method** argument.
 
@@ -57,10 +58,10 @@ def postprocess_masks(
     Returns
     ------
 
-    output_directory *(pathlib.PosixPath)*: Path where the results have been dumped on the disk to.
+    output_directory *(pathlib.PosixPath)*: Path where the results have been stored on the disk to.
 
 
-    Example Usuage
+    Example Usage
     --------------
 
     ```python
@@ -69,7 +70,7 @@ def postprocess_masks(
     >>>postprocess_masks(
         input_directory = Path('ppdm/data/5IT_DUMMY_STUDY/results/segmentation/tumor/segment___thresholding___method-th_triangle'),
         method = 'split_tumor_into_core_and_periphery',
-        method_parameters = {'periphery_as_ratio_of_max_distance': 0.6}
+        method_parameters = {'periphery_as_ratio_of_max_distance': 0.2}
     ```
 
 
@@ -163,10 +164,10 @@ def split_tumor_into_core_and_periphery(
     Returns
     ------
 
-    None: Results are dumped on the disk.
+    None: Results are stored on the disk.
 
 
-    Example Usuage
+    Example Usage
     --------------
 
     ```python

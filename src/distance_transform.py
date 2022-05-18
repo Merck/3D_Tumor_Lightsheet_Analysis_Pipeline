@@ -1,7 +1,7 @@
 """
 ## distance transform module:
 ### module for computing distance transform on segmented masks
-#### This module consists of four main functions:
+#### This module consists of one main functions:
 
 * calculate_distance_tranform
 """
@@ -37,15 +37,15 @@ def calculate_distance_tranform(
 
     **data_path**: *(pathlib.PosixPath)* relative path for the segmented masks to be used for the distance transform
 
-    **stack_size**: *(int)* TODO: DESCTIBE PROPERLY
+    **stack_size**: *(int)* For the HPC setting we used stack size of 100. For local PC we recommend smaller stack size. [HERE](Code use pre-requisites and Installation instructions.md)
 
     Returns
     ------
     **output_directory**: *(pathlib.PosixPath) outputs relative path for the folders with calculated distance transform.
 
-    Results are dumbed on the disk.
+    Results are stored on the disk.
 
-    Example Usuage
+    Example Usage
     --------------
     ```python
 

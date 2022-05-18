@@ -1,6 +1,6 @@
 """
 ## segmentation module:
-### module for blood vessels and tumor segmentation
+### module for blood vessels and tumor boundary segmentation
 #### This module consists of four main functions:
 
 * random_forest
@@ -66,15 +66,15 @@ def segmentation_wrapper(
     relative path to the pre-trained model binary file, which should be used for the segmentation
 
     **device**: *(str)*
-    graphic card which should be used. Code automatically selects graphic card, that is free.
+    graphic card which should be used (relevant only to cloud computing environment). For local code the graphic card is selected automatically based on the PC hardware.
 
     Returns
     ------
 
-    None: Results are dumbed on the disk.
+    None: Results are stored on the disk.
 
 
-    Example Usuage
+    Example Usage
     --------------
 
     ```python
@@ -139,15 +139,15 @@ def unet(
     relative path to the pre-trained model binary file, which should be used for the segmentation
 
     **device**: *(str)*
-    graphic card which should be used. Code automatically selects graphic card, that is free.
+    graphic card which should be used (relevant only to cloud computing environment). For local code the graphic card is selected automatically based on the PC hardware.
 
     Returns
     ------
 
-    None: Results are dumbed on the disk.
+    None: Results are stored on the disk.
 
 
-    Example Usuage
+    Example Usage
     --------------
 
     ```python
@@ -289,10 +289,10 @@ def thresholding(
     Returns
     ------
 
-    None: Results are dumbed on the disk.
+    None: Results are stored on the disk.
 
 
-    Example Usuage
+    Example Usage
     --------------
     ```python
 
@@ -350,10 +350,10 @@ def random_forest(
     Returns
     ------
 
-    None: Results are dumbed on the disk.
+    None: Results are stored on the disk.
 
 
-    Example Usuage
+    Example Usage
     --------------
     ```python
 

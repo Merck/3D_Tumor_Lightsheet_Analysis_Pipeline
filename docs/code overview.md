@@ -7,4 +7,4 @@ The tumor lightsheet image analysis code is organized into 5 modules that includ
 * A manual pipeline: which allows each module in the pipeline to be run separately, allowing further user defined customization.  
 
 
-See the sections on code modules [HERE](Modules/segmentation.md) and code usage for more details [HERE.](code usuage.md)
+See the sections on code modules [HERE](Modules/segmentation.md) and code usage for more details [HERE.](code usage.md)

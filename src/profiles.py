@@ -52,9 +52,9 @@ def calculate_profile(
 
     Returns
     ------
-    **Dict**: *(dict) dictionary containign the results in a nested form. One Key are profiles calcualted for entire tumor, another are calcualted only for core etc .
+    **Dict**: *(dict) dictionary containing the results in a nested form. One Key are profiles calculated for entire tumor, another are calculated only for core etc .
 
-    Example Usuage
+    Example Usage
     --------------
 
     ```python
@@ -240,13 +240,13 @@ def vizualize_profile(
 
      **ylim_bottom**: *(float)*  Minumum values to use in the y-axis.
 
-     **plot** *(bool)* Wheater the profile shuld be plotted or not (usefull when plotting multiple profiles in one cell. Otherwise can be ignored)
+     **plot** *(bool)* Whether the profile should be plotted or not (usefull when plotting multiple profiles in one cell. Otherwise can be ignored)
 
     Returns
     ------
     None
 
-    Example Usuage
+    Example Usage
     --------------
 
     ```python

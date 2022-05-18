@@ -9,14 +9,15 @@ The code can be operated in 2 separated ways:
 
 ** 1)Fully automated pipeline**
 
-which analyzes entire study automaticaly and logs the results (final profiles) into mlflow. (All middle steps e.g. segmented masks are stored on the hard disk).
+which analyzes the entire study automaticaly and logs the results (final biologic penetration profiles) into mlflow. 
+(All steps e.g. segmented masks are stored on the hard disk).
 
 This approach requires the usage of **config.json** file, which contains details regarding the pipeline settings [(see config page)](config.md).
 
-Once the **config.json** is prepared, the code can be used via 2 files:
+Once the **config.json** is prepared, the code can be used via either of the two files bellow:
 
-* main.py
-* master_script.py
+* **main.py** (Command line version)
+* **master_script.py** (Script version which may be operated from jupyter lab or any other python IDE)
 
 
 ### main.py
@@ -36,10 +37,10 @@ This file is a script version of `main.py` file. This means that it allows for i
 
 ** 2)Manual Usage of Modules**
 
-As the entire code is written as a package, one can acces individual modules (functions) and use them wholly separatelly for own purposes e.g. only for blood vessels segmentations/distance transform. This approach does not require the **config.json** file.
+One can choose to run modules individually - e.g. only for blood vessels segmentations/distance transform. This allows for the further customization of the code. This approach does not require the **config.json** file.
 
 See the **Documentation of individual modules** for further details: [Preprocessing,](Modules/preprocessing.md) [Segmentation,](Modules/segmentation.md) [Postprocessing,](Modules/segmentation_postprocessing.md) [Distance Transform,](Modules/distance_transform.md) [Profiles.](Modules/profiles.md)
 
-Even when using Modules individualy, the function's documentation can still be accesed within the jupyterlab. When using **Contextual Helper** we see the functions documentation (see below).
+Even when using Modules individually, the function's documentation can still be accesed within the jupyterlab. When using **Contextual Helper** we see the functions documentation (see below).
 
-![](/images/docs.png)
+![](../images/docs.png)
