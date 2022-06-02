@@ -1,0 +1,27 @@
+{
+    "segmentation_method_vessel": {
+        "method": "thresholding",
+        "method_parameters": {
+            "method": "th_otsu"
+        }
+    },
+    "segmentation_method_tumor": {
+        "method": "thresholding",
+        "method_parameters": {
+            "method": "th_triangle"
+        }
+    },
+    "segmentation_postprocessing_tumor": {
+        "method": "split_tumor_into_core_and_periphery",
+        "method_parameters": {}
+    },
+    "segmentation_postprocessing_vessel": null,
+    "distance_tranform": {
+        "method_parameters": {
+            "stack_size": 4
+        }
+    },
+    "pixels_to_microns": 4,
+    "mlflow_logging": true,
+    "mlflow_run_name": "5IT_DUMMY_STUDY-thresholding"
+}

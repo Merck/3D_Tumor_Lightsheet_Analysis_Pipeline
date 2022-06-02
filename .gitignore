@@ -1,4 +1,4 @@
-data
+data/demo_study/results
 __pycache__
 *.egg-info/
 .vscode/*
