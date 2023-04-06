@@ -26,14 +26,14 @@ This repo provides code for lightsheet imaging data analysis pipeline for extrac
 
 
 
-***Title: <br />
-High-Resolution ex vivo tissue clearing, lightsheet imaging, and data analysis to support macromolecular drug and biomarker distribution in whole organs and tumors. <br /> <br /> Short Tile:<br />
-3D Histology applications for drug discovery.***
+***
+***Title***: 
+A Light sheet fluorescence microscopy and machine learning-based approach to investigate drug and biomarker distribution in whole organs and tumors. <br /> <br /> ***
 
 
 **Authors:<br />**
 
-Niyanta Kumar, Petr Hrobař, Martin Vagenknecht, Jindrich Soukup, Peter Bloomingdale, Tomoko Freshwater, Sophia Bardehle, Roman Peter, Nadia Patterson, Ruban Mangadu, Cinthia Pastuskovas, and Mark Cancilla
+Niyanta Kumar, Petr Hrobař, Martin Vagenknecht, Jindrich Soukup, Nadia Patterson, Peter Bloomingdale, Tomoko Freshwater, Sophia Bardehle, Roman Peter, Ruban Mangadu, Cinthia V. Pastuskovas, and Mark T. Cancilla
 <br /><br />***Merck & Co., Inc.***
 ***
 
